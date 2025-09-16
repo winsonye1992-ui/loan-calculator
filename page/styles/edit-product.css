@@ -1,0 +1,331 @@
+/**
+ * 存贷组合产品测算器 - 编辑产品页面样式
+ */
+
+/* 继承添加产品页面的所有样式 */
+@import url('add-product.css');
+
+/* 编辑产品页面特有样式 */
+
+/* 编辑产品页面特有样式 */
+
+/* 三按钮组样式 */
+.btn-group-3 {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+.btn-group-3 .btn-large {
+    flex: 1;
+    min-width: 0;
+}
+
+/* 删除按钮样式 */
+.btn-danger {
+    background: var(--auxiliary-color-ac3);
+    color: var(--color-white);
+    border-color: var(--auxiliary-color-ac3);
+}
+
+.btn-danger:hover {
+    background: #d1451e;
+    border-color: #d1451e;
+}
+
+.btn-danger:active {
+    background: #b83a1a;
+    border-color: #b83a1a;
+}
+
+/* 只读字段样式 */
+.form-input-field[readonly] {
+    background: var(--background-color-grey);
+    color: var(--text-color-secondary);
+    font-weight: var(--font-weight-medium);
+    cursor: not-allowed;
+}
+
+/* 产品类型显示字段 */
+#productTypeDisplay,
+#foreignTypeDisplay {
+    background: var(--background-color-grey);
+    color: var(--text-color-primary);
+    font-weight: var(--font-weight-medium);
+}
+
+/* 编辑状态指示 */
+.edit-indicator {
+    position: fixed;
+    top: 50%;
+    right: var(--spacing-md);
+    transform: translateY(-50%);
+    background: var(--theme-color-5);
+    color: var(--color-white);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--border-radius-base);
+    font-size: var(--font-size-24);
+    font-weight: var(--font-weight-medium);
+    z-index: var(--z-index-tooltip);
+    box-shadow: var(--box-shadow-base);
+}
+
+/* 数据加载状态 */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: var(--z-index-modal);
+}
+
+.loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid var(--border-color);
+    border-top: 4px solid var(--theme-color-5);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* 表单禁用状态 */
+.form-disabled {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.form-disabled .form-input-field,
+.form-disabled .form-select {
+    cursor: not-allowed;
+}
+
+/* 字段修改提示 */
+.field-modified {
+    border-color: var(--auxiliary-color-ac1) !important;
+    box-shadow: 0 0 0 2px rgba(240, 130, 1, 0.1) !important;
+}
+
+.field-modified:focus {
+    border-color: var(--auxiliary-color-ac1) !important;
+    box-shadow: 0 0 0 2px rgba(240, 130, 1, 0.2) !important;
+}
+
+/* 保存状态指示 */
+.saving-indicator {
+    position: fixed;
+    bottom: var(--spacing-lg);
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--auxiliary-color-ac2);
+    color: var(--color-white);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border-radius: var(--border-radius-base);
+    font-size: var(--font-size-26);
+    font-weight: var(--font-weight-medium);
+    z-index: var(--z-index-tooltip);
+    box-shadow: var(--box-shadow-base);
+    display: none;
+}
+
+.saving-indicator.show {
+    display: block;
+}
+
+/* 响应式调整 */
+@media (max-width: 480px) {
+    .btn-group-3 {
+        flex-direction: column;
+    }
+    
+    .btn-group-3 .btn-large {
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .btn-group-3 {
+        gap: var(--spacing-md);
+    }
+}
+
+/* 删除确认弹窗样式增强 */
+.dlg-action-btn--danger {
+    background: var(--auxiliary-color-ac3);
+    color: var(--color-white);
+    border-color: var(--auxiliary-color-ac3);
+}
+
+.dlg-action-btn--danger:hover {
+    background: #d1451e;
+    border-color: #d1451e;
+}
+
+/* 表单验证增强 */
+.form-input-field.error,
+.form-select.error {
+    border-color: var(--auxiliary-color-ac3);
+    animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+/* 字段帮助文本 */
+.field-help {
+    font-size: var(--font-size-24);
+    color: var(--text-color-secondary);
+    margin-top: var(--spacing-xs);
+    font-style: italic;
+}
+
+/* 计算结果显示增强 */
+.calculation-result {
+    background: var(--auxiliary-color-al4);
+    border: 1px solid var(--auxiliary-color-ac2);
+    border-radius: var(--border-radius-base);
+    padding: var(--spacing-md);
+    margin: var(--spacing-sm) 0;
+    font-weight: var(--font-weight-medium);
+    color: var(--auxiliary-color-ac2);
+    position: relative;
+}
+
+.calculation-result::before {
+    content: '📊';
+    margin-right: var(--spacing-sm);
+}
+
+/* 表单步骤指示器 */
+.form-progress {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--spacing-xl);
+    padding: 0 var(--spacing-lg);
+}
+
+.progress-step {
+    flex: 1;
+    text-align: center;
+    position: relative;
+}
+
+.progress-step::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    width: 100%;
+    height: 2px;
+    background: var(--border-color);
+    transform: translateY(-50%);
+}
+
+.progress-step:last-child::after {
+    display: none;
+}
+
+.progress-step.completed::after {
+    background: var(--auxiliary-color-ac2);
+}
+
+.step-indicator {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--border-color);
+    color: var(--text-color-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--spacing-sm);
+    font-size: var(--font-size-20);
+    font-weight: var(--font-weight-medium);
+}
+
+.progress-step.completed .step-indicator {
+    background: var(--auxiliary-color-ac2);
+    color: var(--color-white);
+}
+
+.step-text {
+    font-size: var(--font-size-22);
+    color: var(--text-color-secondary);
+}
+
+.progress-step.completed .step-text {
+    color: var(--auxiliary-color-ac2);
+    font-weight: var(--font-weight-medium);
+}
+
+/* 数据对比显示 */
+.data-comparison {
+    background: var(--background-color-grey);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-base);
+    padding: var(--spacing-md);
+    margin: var(--spacing-sm) 0;
+}
+
+.comparison-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-xs) 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.comparison-row:last-child {
+    border-bottom: none;
+}
+
+.comparison-label {
+    font-size: var(--font-size-24);
+    color: var(--text-color-secondary);
+}
+
+.comparison-old {
+    font-size: var(--font-size-24);
+    color: var(--text-color-secondary);
+    text-decoration: line-through;
+}
+
+.comparison-new {
+    font-size: var(--font-size-24);
+    color: var(--auxiliary-color-ac1);
+    font-weight: var(--font-weight-medium);
+}
+
+/* 自动保存提示 */
+.auto-save-indicator {
+    position: fixed;
+    top: var(--spacing-lg);
+    right: var(--spacing-lg);
+    background: var(--auxiliary-color-ac2);
+    color: var(--color-white);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--border-radius-base);
+    font-size: var(--font-size-24);
+    font-weight: var(--font-weight-medium);
+    z-index: var(--z-index-tooltip);
+    box-shadow: var(--box-shadow-base);
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.3s ease;
+}
+
+.auto-save-indicator.show {
+    opacity: 1;
+    transform: translateY(0);
+}

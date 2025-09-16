@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>存贷组合产品测算器</title>
+    <meta http-equiv="refresh" content="0; url=./wechat.html">
+    
+    <!-- 微信分享优化 -->
+    <meta name="description" content="专业的存贷组合产品测算工具，帮您计算最优的金融方案">
+    <meta name="keywords" content="存贷计算器,金融工具,贷款计算,存款计算">
+    <meta name="author" content="存贷计算器">
+    
+    <!-- 微信分享标签 -->
+    <meta property="og:title" content="存贷组合产品测算器">
+    <meta property="og:description" content="专业的存贷组合产品测算工具，帮您计算最优的金融方案">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="./src/assets/images/logo.png">
+    
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+        
+        .spinner {
+            border: 4px solid rgba(255,255,255,0.3);
+            border-radius: 50%;
+            border-top: 4px solid white;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .message {
+            font-size: 18px;
+            margin: 20px 0;
+        }
+        
+        .backup-link {
+            margin-top: 30px;
+        }
+        
+        .backup-link a {
+            color: white;
+            text-decoration: underline;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="spinner"></div>
+    <div class="message">正在跳转到存贷计算器...</div>
+    <div class="backup-link">
+        <p>如果没有自动跳转，请点击:</p>
+        <a href="./wechat.html">进入存贷计算器</a>
+    </div>
+    
+    <script>
+        // 如果meta refresh不工作，使用JavaScript跳转
+        setTimeout(function() {
+            window.location.href = './wechat.html';
+        }, 1000);
+    </script>
+</body>
+</html>

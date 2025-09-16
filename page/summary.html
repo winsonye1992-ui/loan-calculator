@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>汇总收益 - 存贷组合产品测算器</title>
+    
+    <!-- 组件库样式 -->
+    <link rel="stylesheet" href="../src/styles/base/variables.css">
+    <link rel="stylesheet" href="../src/styles/base/display-page.css">
+    <link rel="stylesheet" href="../src/styles/base/section.css">
+    <link rel="stylesheet" href="../src/styles/base/element.css">
+    <link rel="stylesheet" href="../src/styles/base/iphone-preview.css">
+    <link rel="stylesheet" href="../src/styles/components/bar/nav-bar.css">
+    <link rel="stylesheet" href="../src/styles/components/bar/status-bar.css">
+    <link rel="stylesheet" href="../src/styles/components/bar/phone-speaker.css">
+    <link rel="stylesheet" href="../src/styles/components/feedback/dialog.css">
+    <link rel="stylesheet" href="../src/styles/components/base/button-combination.css">
+    
+    <!-- 页面样式 -->
+    <link rel="stylesheet" href="styles/summary.css">
+</head>
+<body>
+    <div class="iphone-container">
+        <div class="iphone-notch"></div>
+        <div class="iphone-screen">
+            <div class="content-area">
+                <!-- 状态栏 -->
+                <section class="statusbar-wrapper">
+                    <div class="statusbar">
+                        <div class="statusbar-time">9:41</div>
+                        <div class="statusbar-icons">
+                            <img src="../src/assets/images/signal.png" alt="信号" class="statusbar-signal">
+                            <img src="../src/assets/images/WiFi.png" alt="WiFi" class="statusbar-wifi">
+                            <img src="../src/assets/images/battery.png" alt="电池" class="statusbar-battery">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 导航栏 -->
+                <section class="pad-vertical-0">
+                    <div class="nav-bar nav-bar-white">
+                        <div class="nav-left">
+                            <img src="../src/assets/icons/arrow-left.svg" alt="返回" class="nav-icon" id="backBtn">
+                        </div>
+                        <div class="nav-title">汇总收益</div>
+                        <div class="nav-right">
+                            <img src="../src/assets/icons/home.svg" alt="首页" class="nav-icon" id="homeBtn">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 主内容区域 -->
+                <div class="main-content">
+
+                    <!-- 币种收益列表 -->
+                    <div class="currency-income-section">
+                        <h2 class="section-title">币种收益明细</h2>
+                        
+                        <div class="currency-list" id="currencyList">
+                            <!-- 币种收益列表将通过JavaScript动态生成 -->
+                        </div>
+                        
+                        <!-- 空状态 -->
+                        <div class="empty-state" id="emptyState" style="display: none;">
+                            <img src="../src/assets/images/emptypage.png" alt="暂无收益" class="empty-icon">
+                            <p class="empty-text">暂无产品收益数据，请先添加产品</p>
+                        </div>
+                    </div>
+
+                    <!-- 人民币汇总收益 -->
+                    <div class="cny-summary-section">  
+                        <div class="cny-summary-card">
+                            
+                            
+                            <div class="cny-breakdown" id="cnyBreakdown">
+                                <!-- 人民币收益明细将通过JavaScript动态生成 -->
+                            </div>
+                            <div class="cny-summary-header">
+                                <div class="cny-label">人民币汇总收益</div>
+                                <div class="cny-amount" id="cnyTotalAmount">0.00</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                
+
+                
+                <!-- 手机话筒 -->
+                <section class="phone-speaker-wrap">
+                    <div class="phone-speaker">
+                        <div class="speaker-bar"></div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/database.js"></script>
+    <script src="js/summary.js"></script>
+</body>
+</html>

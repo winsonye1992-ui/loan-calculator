@@ -1,0 +1,364 @@
+/**
+ * 存贷组合产品测算器 - 汇总收益页面样式
+ */
+
+/* 主内容区域 */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding-bottom: 30px; /* 为手机话筒留出空间 */
+}
+
+/* 手机话筒固定在手机框底部 */
+.phone-speaker-wrap {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: var(--z-index-tooltip);
+}
+
+
+
+/* 币种收益区域 */
+.currency-income-section {
+    flex: 1;
+    padding: var(--spacing-lg);
+    overflow-y: auto;
+    background: var(--color-white);
+}
+
+.section-title {
+    font-size: var(--font-size-32);
+    font-weight: var(--font-weight-semibold);
+    color: var(--text-color-primary);
+    margin: 0 0 var(--spacing-lg) 0;
+}
+
+/* 币种列表 */
+.currency-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.currency-item {
+    background: var(--color-white);
+    padding: var(--spacing-lg);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.currency-item.no-rate {
+    padding: 16px 0;
+}
+
+.currency-item.has-rate {
+    padding: var(--spacing-lg) 0;
+}
+
+
+
+.currency-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-md);
+}
+
+.currency-info {
+    display: flex;
+    align-items: center;
+}
+
+.currency-name {
+    font-size: var(--font-size-26);
+    color: var(--text-color-secondary);
+}
+
+.currency-income {
+    text-align: right;
+}
+
+.income-amount {
+    font-size: var(--font-size-26);
+    font-weight: var(--font-weight-medium);
+    color: var(--theme-color-5);
+}
+
+.income-label {
+    font-size: var(--font-size-24);
+    color: var(--text-color-secondary);
+    margin-top: var(--spacing-xs);
+}
+
+/* 汇率输入区域 */
+.exchange-rate-section {
+    padding-top: var(--spacing-md);
+}
+
+.rate-input-group {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.rate-label {
+    font-size: var(--font-size-26);
+    color: var(--text-color-secondary);
+    min-width: 80px;
+}
+
+.rate-input {
+    flex: 1;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-base);
+    font-size: var(--font-size-26);
+    color: var(--text-color-primary);
+    background: var(--background-color);
+    transition: all 0.3s ease;
+}
+
+.rate-input:focus {
+    outline: none;
+    border-color: var(--theme-color-5);
+    box-shadow: 0 0 0 2px rgba(219, 85, 86, 0.1);
+}
+
+.rate-input.error {
+    border-color: var(--auxiliary-color-ac3);
+}
+
+.rate-error {
+    font-size: var(--font-size-24);
+    color: var(--auxiliary-color-ac3);
+    margin-top: var(--spacing-xs);
+    display: none;
+}
+
+.rate-error.show {
+    display: block;
+}
+
+
+
+/* 人民币汇总区域 */
+.cny-summary-section {
+    padding: var(--spacing-lg);
+    background: var(--background-color);
+    border-top: 1px solid var(--border-color);
+}
+
+.cny-summary-card {
+    background: var(--color-white);
+}
+
+.cny-summary-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: var(--spacing-lg);
+    padding: 16px 0;
+    border-top: 1px solid var(--border-color);
+}
+
+.cny-label {
+    font-size: var(--font-size-32);
+    font-weight: var(--font-weight-semibold);
+    color: var(--text-color-primary);
+}
+
+.cny-amount {
+    font-size: var(--font-size-48);
+    font-weight: var(--font-weight-bold);
+    color: var(--text-color-primary);
+}
+
+.cny-amount.positive {
+    color: var(--auxiliary-color-ac3);
+}
+
+.cny-amount.negative {
+    color: var(--auxiliary-color-ac2);
+}
+
+.cny-amount.zero {
+    color: var(--text-color-secondary);
+}
+
+/* 人民币收益明细 */
+.cny-breakdown {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.cny-breakdown-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-sm) 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.cny-breakdown-item:last-child {
+    border-bottom: none;
+}
+
+.breakdown-currency {
+    font-size: var(--font-size-26);
+    color: var(--text-color-primary);
+    font-weight: var(--font-weight-medium);
+}
+
+.breakdown-amount {
+    font-size: var(--font-size-26);
+    color: var(--text-color-primary);
+    font-weight: var(--font-weight-medium);
+}
+
+.breakdown-amount.positive {
+    color: var(--auxiliary-color-ac3);
+}
+
+.breakdown-amount.negative {
+    color: var(--auxiliary-color-ac2);
+}
+
+.breakdown-amount.zero {
+    color: var(--text-color-secondary);
+}
+
+/* 空状态 */
+.empty-state {
+    text-align: center;
+    padding: var(--spacing-xxl) var(--spacing-lg);
+}
+
+.empty-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: var(--spacing-lg);
+    opacity: 0.5;
+}
+
+.empty-text {
+    font-size: var(--font-size-28);
+    color: var(--text-color-secondary);
+    margin: 0;
+}
+
+
+
+/* 响应式设计 */
+@media (max-width: 480px) {
+    .currency-income-section {
+        padding: var(--spacing-md);
+    }
+    
+    .cny-summary-section {
+        padding: var(--spacing-md);
+    }
+    
+    .bottom-actions {
+        padding: var(--spacing-md);
+    }
+    
+    .rate-input-group {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .rate-label {
+        min-width: auto;
+        margin-bottom: var(--spacing-xs);
+    }
+}
+
+@media (min-width: 768px) {
+    .currency-item {
+        padding: var(--spacing-xl);
+    }
+}
+
+/* 加载状态 */
+.loading {
+    text-align: center;
+    padding: var(--spacing-xxl);
+    color: var(--text-color-secondary);
+}
+
+.loading::after {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--border-color);
+    border-top: 2px solid var(--theme-color-5);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-left: var(--spacing-sm);
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* 错误状态 */
+.error-message {
+    background: var(--auxiliary-color-al2);
+    border: 1px solid var(--auxiliary-color-ac1);
+    border-radius: var(--border-radius-base);
+    padding: var(--spacing-md);
+    margin: var(--spacing-md) 0;
+    color: var(--auxiliary-color-ac1);
+    font-size: var(--font-size-26);
+    text-align: center;
+}
+
+/* 成功状态 */
+.success-message {
+    background: var(--auxiliary-color-al4);
+    border: 1px solid var(--auxiliary-color-ac2);
+    border-radius: var(--border-radius-base);
+    padding: var(--spacing-md);
+    margin: var(--spacing-md) 0;
+    color: var(--auxiliary-color-ac2);
+    font-size: var(--font-size-26);
+    text-align: center;
+}
+
+
+
+/* 收益正负值样式 */
+.income-amount.positive {
+    color: var(--auxiliary-color-ac3);
+}
+
+.income-amount.negative {
+    color: var(--auxiliary-color-ac2);
+}
+
+.income-amount.zero {
+    color: var(--text-color-secondary);
+}
+
+
+
+
+
+/* 汇率输入框样式增强 */
+.rate-input {
+    text-align: right;
+}
+
+.rate-input::placeholder {
+    color: var(--text-color-disabled);
+}
+
+
+
+

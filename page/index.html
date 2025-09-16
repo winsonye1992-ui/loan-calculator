@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>存贷组合产品测算器</title>
+    
+    <!-- 微信分享优化 -->
+    <meta name="description" content="专业的存贷组合产品测算工具，帮您计算最优的金融方案">
+    <meta name="keywords" content="存贷计算器,金融工具,贷款计算,存款计算">
+    <meta name="author" content="存贷计算器">
+    
+    <!-- 微信分享标签 -->
+    <meta property="og:title" content="存贷组合产品测算器">
+    <meta property="og:description" content="专业的存贷组合产品测算工具，帮您计算最优的金融方案">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="../src/assets/images/logo.png">
+    
+    <!-- 微信浏览器兼容 -->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="x5-page-mode" content="app">
+    
+    <!-- 防止缓存问题 -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    
+    <!-- 组件库样式 -->
+    <link rel="stylesheet" href="../src/styles/base/variables.css">
+    <link rel="stylesheet" href="../src/styles/base/display-page.css">
+    <link rel="stylesheet" href="../src/styles/base/section.css">
+    <link rel="stylesheet" href="../src/styles/base/element.css">
+    <link rel="stylesheet" href="../src/styles/base/iphone-preview.css">
+    <link rel="stylesheet" href="../src/styles/components/bar/nav-bar.css">
+    <link rel="stylesheet" href="../src/styles/components/bar/status-bar.css">
+    <link rel="stylesheet" href="../src/styles/components/bar/phone-speaker.css">
+    <link rel="stylesheet" href="../src/styles/components/feedback/dialog.css">
+    <link rel="stylesheet" href="../src/styles/components/base/button-combination.css">
+    
+    <!-- 页面样式 -->
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div class="iphone-container">
+        <div class="iphone-notch"></div>
+        <div class="iphone-screen">
+            <div class="content-area">
+                <!-- 状态栏 -->
+                <section class="statusbar-wrapper">
+                    <div class="statusbar">
+                        <div class="statusbar-time">9:41</div>
+                        <div class="statusbar-icons">
+                            <img src="../src/assets/images/signal.png" alt="信号" class="statusbar-signal">
+                            <img src="../src/assets/images/WiFi.png" alt="WiFi" class="statusbar-wifi">
+                            <img src="../src/assets/images/battery.png" alt="电池" class="statusbar-battery">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 导航栏 -->
+                <section class="pad-vertical-0">
+                    <div class="nav-bar nav-bar-white">
+                        <div class="nav-left">
+                            <img src="../src/assets/icons/arrow-left.svg" alt="返回" class="nav-icon" id="backBtn">
+                        </div>
+                        <div class="nav-title">存贷组合产品测算器</div>
+                        <div class="nav-right">
+                            <img src="../src/assets/icons/home.svg" alt="首页" class="nav-icon" id="homeBtn">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 主内容区域 -->
+                <div class="main-content">
+                    <!-- 产品列表 -->
+                    <div class="product-list-container">
+                        <div class="product-list-header">
+                            <h2 class="list-title">产品列表</h2>
+                            <div class="list-count" id="productCount">共 0 个产品</div>
+                        </div>
+                        
+                        <div class="product-list" id="productList">
+                            <!-- 产品列表将通过JavaScript动态生成 -->
+                        </div>
+                        
+                        <!-- 空状态 -->
+                        <div class="empty-state" id="emptyState" style="display: none;">
+                            <img src="../src/assets/images/emptypage.png" alt="暂无产品" class="empty-icon">
+                            <div class="empty-action">
+                                <button class="btn-medium btn-secondary" id="addProductBtnEmpty">
+                                    <span class="btn-text">添加新产品</span>
+                                </button>
+                            </div>
+                            <p class="empty-text">暂无产品，请添加新产品开始测算</p>
+                        </div>
+                    </div>
+
+                </div>
+                
+                <!-- 底部按钮区域 -->
+                <div class="bottom-actions">
+                    <section class="section">
+                        <div class="btn-group-2">
+                            <button class="btn-large btn-secondary" id="addProductBtn">
+                                <span class="btn-text">添加新产品</span>
+                            </button>
+                            <button class="btn-large btn-primary" id="summaryBtn">
+                                <span class="btn-text">汇总收益</span>
+                            </button>
+                        </div>
+                    </section>
+                </div>
+                
+                <!-- 手机话筒 -->
+                <section class="phone-speaker-wrap">
+                    <div class="phone-speaker">
+                        <div class="speaker-bar"></div>
+                    </div>
+                </section>
+
+                <!-- 删除确认弹窗 -->
+                <div class="base-mask" id="deleteMask" style="display: none;">
+                    <div class="dialog-popup-container">
+                        <section class="dlg-container">
+                            <div class="dlg-title">确认删除</div>
+                            <div class="dlg-content">是否确认删除该产品？</div>
+                            <div class="dlg-footer dlg-footer--horizontal">
+                                <button class="dlg-action-btn" id="cancelDeleteBtn">取消</button>
+                                <button class="dlg-action-btn dlg-action-btn--primary" id="confirmDeleteBtn">确认</button>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+
+                <!-- 帮助弹窗 -->
+                <div class="base-mask" id="helpMask" style="display: none;">
+                    <div class="dialog-popup-container">
+                        <section class="dlg-container">
+                            <div class="dlg-title">使用帮助</div>
+                            <div class="dlg-content">
+                                <p>1. 点击"添加新产品"录入产品信息</p>
+                                <p>2. 支持存款、贷款、外汇（即期、远期、掉期）产品</p>
+                                <p>3. 点击"更多"查看产品详情</p>
+                                <p>4. 点击"编辑"修改产品信息</p>
+                                <p>5. 点击"汇总收益"查看各币种收益</p>
+                            </div>
+                            <div class="dlg-footer">
+                                <button class="dlg-action-btn" id="closeHelpBtn">知道了</button>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/database.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,510 @@
+/**
+ * 存贷组合产品测算器 - 添加产品页面样式
+ */
+
+/* 主内容区域 - 固定高度，内容可滚动 */
+.main-content {
+    height: calc(100vh - 88px - 120px); /* 总高度 - 状态栏导航栏(88px) - 底部工具栏(120px) */
+    margin-top: 88px; /* 为状态栏和导航栏留出空间，定位在导航栏下方 */
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    /* 防止滚动穿透 */
+    overscroll-behavior: contain;
+}
+
+/* 状态栏固定定位 */
+.statusbar-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: var(--z-index-tooltip);
+    background-color: var(--background-color);
+}
+
+
+
+/* 导航栏容器定位 */
+section.pad-vertical-0 {
+    position: absolute;
+    top: 44px; /* 状态栏高度 */
+    left: 0;
+    right: 0;
+    z-index: var(--z-index-tooltip);
+}
+
+/* 手机话筒固定在手机框底部 */
+.phone-speaker-wrap {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: var(--z-index-tooltip);
+}
+
+/* 表单容器 */
+.product-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: var(--spacing-lg); /* 添加表单内边距 */
+    background-color: var(--color-white); /* 添加白色背景 */
+}
+
+/* 表单区域 */
+.product-form-section {
+    /* 移除分组样式，让所有字段连续显示 */
+}
+
+/* 表单项 */
+.form-item {
+    margin-bottom: var(--spacing-lg);
+    display: flex;
+    flex-direction: column;
+}
+
+/* 表单字段容器 */
+.form-field {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.form-input {
+    text-align: right;
+}
+
+.form-label {
+    font-size: var(--font-size-28);
+    font-weight: var(--font-weight-medium);
+    color: var(--text-color-primary);
+    display: block;
+}
+
+.form-label.required::after {
+    content: ' *';
+    color: var(--auxiliary-color-ac3);
+}
+
+/* 表单输入 */
+.form-input {
+    position: relative;
+}
+
+.form-input-field,
+.form-select {
+    width: 100%;
+    height: 44px;
+    line-height: 44px;
+    padding: 0 0 0 var(--spacing-lg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-base);
+    font-size: var(--font-size-28) !important; /* 确保字体大小一致 */
+    color: var(--text-color-primary);
+    background: var(--background-color);
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.form-input-field::placeholder,
+.form-select::placeholder {
+    font-size: var(--font-size-28) !important; /* 确保字体大小一致 */
+    color: var(--text-color-secondary);
+}
+
+/* 下拉框选项字号 */
+.form-select option {
+    font-size: var(--font-size-28);
+}
+
+/* 下拉框特殊样式 */
+.form-select {
+    border: none; /* 移除下拉框边框 */
+    text-align: right; /* 下拉框内容右对齐 */
+}
+
+.form-input-field:focus,
+.form-select:focus {
+    outline: none;
+    border-color: var(--theme-color-5);
+    box-shadow: 0 0 0 2px rgba(219, 85, 86, 0.1);
+}
+
+.form-input-field:disabled,
+.form-select:disabled {
+    background: var(--background-color-grey);
+    color: var(--text-color-disabled);
+    cursor: not-allowed;
+}
+
+.form-input-field[readonly] {
+    background: var(--color-white) !important;
+    color: var(--text-color-primary) !important;
+    text-align: right; /* 只读字段内容右对齐 */
+    font-size: var(--font-size-28) !important; /* 确保字体大小一致 */
+}
+
+/* 产品种类输入框特殊样式 */
+#productType.form-input-field[readonly] {
+    padding-right: 40px; /* 为箭头图标留出空间 */
+}
+
+/* 所有下拉选择输入框特殊样式 */
+#depositCurrency.form-input-field[readonly],
+#loanCurrency.form-input-field[readonly],
+#depositPeriodUnit.form-input-field[readonly],
+#loanPeriodUnit.form-input-field[readonly],
+#foreignType.form-input-field[readonly],
+#sellCurrency.form-input-field[readonly],
+#buyCurrency.form-input-field[readonly],
+#nearSellCurrency.form-input-field[readonly],
+#nearBuyCurrency.form-input-field[readonly],
+#farSellCurrency.form-input-field[readonly],
+#farBuyCurrency.form-input-field[readonly] {
+    padding-right: 40px; /* 为箭头图标留出空间 */
+}
+
+/* 选择箭头样式 */
+.select-arrow {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; /* 确保箭头不会阻挡点击事件 */
+    z-index: 1;
+}
+
+.arrow-icon {
+    width: 16px;
+    height: 16px;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+/* 悬停时箭头变亮 */
+.form-input:hover + .select-arrow .arrow-icon,
+.form-input-field:hover ~ .select-arrow .arrow-icon {
+    opacity: 0.8;
+}
+
+/* 错误提示 */
+.input-error {
+    font-size: var(--font-size-24);
+    color: var(--auxiliary-color-ac3);
+    margin-top: var(--spacing-xs);
+    display: none;
+    width: 100%;
+    text-align: right;
+}
+
+.input-error.show {
+    display: block;
+}
+
+/* 外汇子表单 */
+.foreign-sub-form {
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-base);
+    padding: var(--spacing-lg);
+    margin: var(--spacing-md) 0;
+    background: var(--background-color-grey);
+}
+
+/* 掉期交易区域 */
+.swap-section {
+    margin-bottom: var(--spacing-xl);
+}
+
+.swap-section:last-child {
+    margin-bottom: 0;
+}
+
+.swap-title {
+    font-size: var(--font-size-32);
+    font-weight: var(--font-weight-semibold);
+    color: var(--text-color-primary);
+    margin: 0 0 var(--spacing-lg) 0;
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 2px solid var(--theme-color-5);
+}
+
+/* 底部按钮区域 */
+.bottom-actions {
+    position: absolute;
+    bottom: 30px; /* 在手机话筒上方，高度等于phone-speaker的高度 */
+    left: 0;
+    right: 0;
+    border-top: 1px solid var(--border-color);
+    background: var(--background-color);
+    z-index: var(--z-index-tooltip);
+    padding: var(--spacing-lg); /* 添加内边距 */
+}
+
+/* 响应式设计 */
+@media (max-width: 480px) {
+    .bottom-actions {
+        padding: var(--spacing-md);
+    }
+    
+    .foreign-sub-form {
+        padding: var(--spacing-md);
+    }
+}
+
+@media (min-width: 768px) {
+    .form-item {
+        margin-bottom: var(--spacing-xl);
+    }
+}
+
+/* 加载状态 */
+.loading {
+    text-align: center;
+    padding: var(--spacing-xxl);
+    color: var(--text-color-secondary);
+}
+
+.loading::after {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--border-color);
+    border-top: 2px solid var(--theme-color-5);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-left: var(--spacing-sm);
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* 错误状态 */
+.error-message {
+    background: var(--auxiliary-color-al2);
+    border: 1px solid var(--auxiliary-color-ac1);
+    border-radius: var(--border-radius-base);
+    padding: var(--spacing-md);
+    margin: var(--spacing-md) 0;
+    color: var(--auxiliary-color-ac1);
+    font-size: var(--font-size-26);
+    text-align: center;
+}
+
+/* 成功状态 */
+.success-message {
+    background: var(--auxiliary-color-al4);
+    border: 1px solid var(--auxiliary-color-ac2);
+    border-radius: var(--border-radius-base);
+    padding: var(--spacing-md);
+    margin: var(--spacing-md) 0;
+    color: var(--auxiliary-color-ac2);
+    font-size: var(--font-size-26);
+    text-align: center;
+}
+
+/* 表单验证样式 */
+.form-input-field.error,
+.form-select.error {
+    border-color: var(--auxiliary-color-ac3);
+}
+
+.form-input-field.error:focus,
+.form-select.error:focus {
+    border-color: var(--auxiliary-color-ac3);
+    box-shadow: 0 0 0 2px rgba(237, 102, 53, 0.1);
+}
+
+/* 自动计算字段样式 */
+.form-input-field[readonly] {
+    background: var(--background-color-grey);
+    color: var(--text-color-secondary);
+    font-weight: var(--font-weight-medium);
+}
+
+/* 币种选择器样式 */
+.form-select {
+    cursor: pointer;
+}
+
+.form-select:focus {
+    cursor: pointer;
+}
+
+/* 数字输入框样式 */
+.form-input-field[type="number"]::-webkit-outer-spin-button,
+.form-input-field[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* 表单分组样式 */
+.form-group {
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-base);
+    padding: var(--spacing-lg);
+    margin: var(--spacing-md) 0;
+    background: var(--background-color-grey);
+}
+
+.form-group-title {
+    font-size: var(--font-size-32);
+    font-weight: var(--font-weight-semibold);
+    color: var(--text-color-primary);
+    margin: 0 0 var(--spacing-lg) 0;
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* 必填字段提示 */
+.required-hint {
+    font-size: var(--font-size-24);
+    color: var(--text-color-secondary);
+    margin-top: var(--spacing-sm);
+    font-style: italic;
+}
+
+/* 表单验证提示 */
+.validation-summary {
+    background: var(--auxiliary-color-al2);
+    border: 1px solid var(--auxiliary-color-ac1);
+    border-radius: var(--border-radius-base);
+    padding: var(--spacing-md);
+    margin: var(--spacing-md) 0;
+    color: var(--auxiliary-color-ac1);
+    font-size: var(--font-size-26);
+}
+
+.validation-summary ul {
+    margin: var(--spacing-sm) 0 0 0;
+    padding-left: var(--spacing-lg);
+}
+
+.validation-summary li {
+    margin-bottom: var(--spacing-xs);
+}
+
+/* 表单提交状态 */
+.form-submitting {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.form-submitting .btn-large {
+    position: relative;
+}
+
+.form-submitting .btn-large::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    margin: -8px 0 0 -8px;
+    border: 2px solid transparent;
+    border-top: 2px solid currentColor;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* 字段帮助文本 */
+.field-help {
+    font-size: var(--font-size-24);
+    color: var(--text-color-secondary);
+    margin-top: var(--spacing-xs);
+    font-style: italic;
+}
+
+/* 计算结果显示 */
+.calculation-result {
+    background: var(--auxiliary-color-al4);
+    border: 1px solid var(--auxiliary-color-ac2);
+    border-radius: var(--border-radius-base);
+    padding: var(--spacing-md);
+    margin: var(--spacing-sm) 0;
+    font-weight: var(--font-weight-medium);
+    color: var(--auxiliary-color-ac2);
+}
+
+/* 表单步骤指示器 */
+.form-steps {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--spacing-xl);
+    padding: 0 var(--spacing-lg);
+}
+
+.form-step {
+    flex: 1;
+    text-align: center;
+    position: relative;
+}
+
+.form-step::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    width: 100%;
+    height: 2px;
+    background: var(--border-color);
+    transform: translateY(-50%);
+}
+
+.form-step:last-child::after {
+    display: none;
+}
+
+.form-step.active::after {
+    background: var(--theme-color-5);
+}
+
+.step-number {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--border-color);
+    color: var(--text-color-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--spacing-sm);
+    font-size: var(--font-size-24);
+    font-weight: var(--font-weight-medium);
+}
+
+.form-step.active .step-number {
+    background: var(--theme-color-5);
+    color: var(--color-white);
+}
+
+.step-label {
+    font-size: var(--font-size-24);
+    color: var(--text-color-secondary);
+}
+
+.form-step.active .step-label {
+    color: var(--theme-color-5);
+    font-weight: var(--font-weight-medium);
+}
+
+/* 确定按钮鼠标悬停效果 */
+#productTypeMask .popup-title-action-btn,
+#currencyMask .popup-title-action-btn,
+#foreignTypeMask .popup-title-action-btn,
+#periodUnitMask .popup-title-action-btn {
+    cursor: pointer; /* 鼠标悬停时显示手型光标 */
+    transition: opacity 0.3s ease; /* 添加过渡效果 */
+}
+
+#productTypeMask .popup-title-action-btn:hover,
+#currencyMask .popup-title-action-btn:hover,
+#foreignTypeMask .popup-title-action-btn:hover,
+#periodUnitMask .popup-title-action-btn:hover {
+    opacity: 0.8; /* 鼠标悬停时稍微透明 */
+}
