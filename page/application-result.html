@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>申请结果 - 东莞银行直销银行</title>
+    <link rel="stylesheet" href="../src/styles/base/variables.css">
+    <link rel="stylesheet" href="../src/styles/base/section.css">
+    <link rel="stylesheet" href="../src/styles/base/element.css">
+    <link rel="stylesheet" href="../src/styles/base/iphone-preview.css">
+    <link rel="stylesheet" href="../src/styles/components/bar/status-bar.css">
+    <link rel="stylesheet" href="../src/styles/components/bar/phone-speaker.css">
+    <link rel="stylesheet" href="../src/styles/components/bar/nav-bar.css">
+    <link rel="stylesheet" href="../css/application-result.css">
+</head>
+<body>
+    <div class="iphone-container">
+        <div class="iphone-notch"></div>
+        <div class="iphone-screen">
+            <div class="content-area">
+                
+                <!-- 状态栏 -->
+                <section class="statusbar-wrapper">
+                    <div class="statusbar">
+                        <div class="statusbar-time">9:41</div>
+                        <div class="statusbar-icons">
+                            <img src="../src/assets/images/signal.png" alt="信号" class="statusbar-signal">
+                            <img src="../src/assets/images/WiFi.png" alt="WiFi" class="statusbar-wifi">
+                            <img src="../src/assets/images/battery.png" alt="电池" class="statusbar-battery">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 导航栏 -->
+                <section class="pad-vertical-0">
+                    <div class="nav-bar nav-bar-white">
+                        <div class="nav-left" onclick="window.location.href='face-recognition.html'">
+                            <img src="../src/assets/icons/arrow-left.svg" alt="返回" class="nav-icon">
+                        </div>
+                        <div class="nav-title">申请结果</div>
+                        <div class="nav-right">
+                            <img src="../assets/icons/more.svg" alt="更多" class="nav-icon">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 可滚动内容容器 -->
+                <div class="scrollable-main-content">
+                    
+                    <!-- 结果图标区域 -->
+                    <div class="result-illustration">
+                        <div class="illustration-container">
+                            <!-- 结果图片 -->
+                            <img src="../assets/images/result.png" class="result-icon">
+                        </div>
+                    </div>
+
+                    <!-- 状态文字区域 -->
+                    <div class="status-section">
+                        <h2 class="status-title">预授额度申请已提交</h2>
+                        <p class="status-description">小莞正在为您申请预授信额度，如果您还未关注我行微信公众号，请务必先关注，以便后续业务办理</p>
+                    </div>
+
+                </div>
+
+                <!-- 全宽按钮 -->
+                <section class="section">
+                    <div class="btn-group">
+                        <button class="btn-large btn-primary" id="confirm-btn">
+                            <span class="btn-text">我知道了</span>
+                        </button>
+                    </div>
+                </section>
+
+                <!-- 手机话筒 -->
+                <section class="phone-speaker-wrap">
+                    <div class="phone-speaker">
+                        <div class="speaker-bar"></div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/application-result.js"></script>
+</body>
+</html>

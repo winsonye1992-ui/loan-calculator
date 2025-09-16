@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>申请信息登记 - 东莞银行直销银行</title>
+    <link rel="stylesheet" href="../src/styles/base/variables.css">
+    <link rel="stylesheet" href="../src/styles/base/section.css">
+    <link rel="stylesheet" href="../src/styles/base/element.css">
+    <link rel="stylesheet" href="../src/styles/base/iphone-preview.css">
+    <link rel="stylesheet" href="../src/styles/components/bar/status-bar.css">
+    <link rel="stylesheet" href="../src/styles/components/bar/phone-speaker.css">
+    <link rel="stylesheet" href="../src/styles/components/bar/nav-bar.css">
+    <link rel="stylesheet" href="../css/application-info.css">
+</head>
+<body>
+    <div class="iphone-container">
+        <div class="iphone-notch"></div>
+        <div class="iphone-screen">
+            <div class="content-area">
+                
+                <!-- 状态栏 -->
+                <section class="statusbar-wrapper">
+                    <div class="statusbar">
+                        <div class="statusbar-time">9:41</div>
+                        <div class="statusbar-icons">
+                            <img src="../src/assets/images/signal.png" alt="信号" class="statusbar-signal">
+                            <img src="../src/assets/images/WiFi.png" alt="WiFi" class="statusbar-wifi">
+                            <img src="../src/assets/images/battery.png" alt="电池" class="statusbar-battery">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 导航栏 -->
+                <section class="pad-vertical-0">
+                    <div class="nav-bar nav-bar-white">
+                        <div class="nav-left" onclick="window.location.href='id-card-upload.html'">
+                            <img src="../src/assets/icons/arrow-left.svg" alt="返回" class="nav-icon">
+                        </div>
+                        <div class="nav-title">申请信息登记</div>
+                        <div class="nav-right">
+                            <img src="../assets/icons/more.svg" alt="更多" class="nav-icon">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 可滚动内容容器 -->
+                <div class="scrollable-main-content">
+                    
+                    <!-- 申请人信息 -->
+                    <section class="info-section">
+                        <div class="section-header">申请人信息</div>
+                        
+                        <div class="form-item">
+                            <div class="form-label">申请人姓名</div>
+                            <div class="form-input">
+                                <input type="text" value="张三" disabled placeholder="请输入">
+                            </div>
+                        </div>
+
+                        <div class="form-item">
+                            <div class="form-label">身份证号</div>
+                            <div class="form-input">
+                                <input type="text" value="440181199001011234" disabled placeholder="请输入">
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- 企业基本信息 -->
+                    <section class="info-section">
+                        <div class="section-header">企业基本信息</div>
+                        
+                        <div class="form-item">
+                            <div class="form-label">企业名称</div>
+                            <div class="form-input">
+                                <textarea id="company-name" placeholder="请输入" autocomplete="off" rows="2" style="min-height: 40px;"></textarea>
+                                <div class="suggestion-list" id="suggestion-list" style="display: none;">
+                                    <div class="suggestion-item" data-company="东莞市莞城电子科技有限公司" data-address="广东省东莞市莞城区东正路123号">
+                                        <div class="suggestion-name">东莞市莞城电子科技有限公司</div>
+                                        <div class="suggestion-address">广东省东莞市莞城区东正路123号</div>
+                                    </div>
+                                    <div class="suggestion-item" data-company="东莞市南城服装贸易有限公司" data-address="广东省东莞市南城区鸿福路456号">
+                                        <div class="suggestion-name">东莞市南城服装贸易有限公司</div>
+                                        <div class="suggestion-address">广东省东莞市南城区鸿福路456号</div>
+                                    </div>
+                                    <div class="suggestion-item" data-company="东莞市东城食品加工有限公司" data-address="广东省东莞市东城区东城路789号">
+                                        <div class="suggestion-name">东莞市东城食品加工有限公司</div>
+                                        <div class="suggestion-address">广东省东莞市东城区东城路789号</div>
+                                    </div>
+                                    <div class="suggestion-item" data-company="东莞市虎门物流运输有限公司" data-address="广东省东莞市虎门镇虎门大道101号">
+                                        <div class="suggestion-name">东莞市虎门物流运输有限公司</div>
+                                        <div class="suggestion-address">广东省东莞市虎门镇虎门大道101号</div>
+                                    </div>
+                                    <div class="suggestion-item" data-company="东莞市长安机械制造有限公司" data-address="广东省东莞市长安镇长安大道202号">
+                                        <div class="suggestion-name">东莞市长安机械制造有限公司</div>
+                                        <div class="suggestion-address">广东省东莞市长安镇长安大道202号</div>
+                                    </div>
+                                    <div class="suggestion-item" data-company="东莞市寮步建材贸易有限公司" data-address="广东省东莞市寮步镇寮步路303号">
+                                        <div class="suggestion-name">东莞市寮步建材贸易有限公司</div>
+                                        <div class="suggestion-address">广东省东莞市寮步镇寮步路303号</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-item">
+                            <div class="form-label">企业注册地</div>
+                            <div class="form-input">
+                                <textarea id="company-address" disabled placeholder="根据企业名称自动显示" rows="2" style="min-height: 40px;"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-item">
+                            <div class="form-label">企业注册地是否有房</div>
+                            <div class="radio-group">
+                                <label class="radio-option">
+                                    <input type="radio" name="hasProperty" value="yes">
+                                    <span class="radio-text">有房</span>
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="hasProperty" value="no">
+                                    <span class="radio-text">无房</span>
+                                </label>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- 税务认证信息 -->
+                    <section class="info-section">
+                        <div class="section-header">税务认证信息</div>
+                        
+                        <div class="tax-auth-button">
+                            <button class="auth-btn" onclick="handleTaxAuth()" id="tax-auth-btn">税务授权</button>
+                        </div>
+                        
+                        <div class="auth-tip">
+                            <span class="tip-icon">⚠️</span>
+                            <span class="tip-text">是否愿意进行税务授权，成功授权后或可获得更高额度！</span>
+                        </div>
+
+                        <div class="form-item">
+                            <div class="form-label">税务授权企业</div>
+                            <div class="form-input">
+                                <input type="text" disabled id="tax-company-input" placeholder="请输入">
+                            </div>
+                        </div>
+
+                        <div class="form-item">
+                            <div class="form-label">税务认证结果</div>
+                            <div class="form-input">
+                                <input type="text" disabled id="tax-result-input" placeholder="请输入">
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- 联系人信息 -->
+                    <section class="info-section">
+                        <div class="section-header">推荐人信息</div>
+                        
+                        <div class="form-item">
+                            <div class="form-label">推荐人</div>
+                            <div class="form-input">
+                                <input type="text" placeholder="请输入（非必填）">
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- 验证信息 -->
+                    <section class="info-section">
+                        <div class="section-header">验证信息</div>
+                        
+                        <div class="form-item">
+                            <div class="form-label">手机号码</div>
+                            <div class="form-input">
+                                <input type="text" value="130 8289 8761" disabled placeholder="请输入">
+                            </div>
+                        </div>
+
+                        <div class="input-verification-item">
+                            <div class="input-label">验证码</div>
+                            <input type="text" placeholder="请输入验证码">
+                            <div class="get-code-button">获取验证码</div>
+                        </div>
+                    </section>
+
+                    <!-- 协议同意 -->
+                    <section class="info-section">
+                        <div class="agreement-section">
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                <span class="checkbox__text">本人已阅读并确认签署 
+                                    <a href="#" class="agreement-link" onclick="previewAgreement('credit')">《人行征信授权书》</a>
+                                    <a href="#" class="agreement-link" onclick="previewAgreement('personal')">《个人信息使用授权书》</a>
+                                    <a href="#" class="agreement-link" onclick="previewAgreement('delegate')">《授权委托书》</a>
+                                </span>
+                            </label>
+                        </div>
+                    </section>
+
+                </div>
+
+                <!-- 全宽按钮 -->
+                <section class="section">
+                    <div class="btn-group">
+                        <button class="btn-large btn-primary" onclick="handleSubmit()">
+                            <span class="btn-text">提交</span>
+                        </button>
+                    </div>
+                </section>
+
+                <!-- 协议预览弹层 -->
+                <div class="agreement-modal" id="agreement-modal" style="display: none;">
+                    <div class="modal-overlay" onclick="closeAgreementModal()"></div>
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <div class="modal-title" id="modal-title">协议预览</div>
+                            <div class="modal-close" onclick="closeAgreementModal()">
+                                <img src="../src/assets/icons/close.svg" alt="关闭">
+                            </div>
+                        </div>
+                        <div class="modal-body">
+                            <div class="agreement-content" id="agreement-content">
+                                <!-- 协议内容将通过JavaScript动态加载 -->
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn-large btn-secondary" id="next-page-btn" onclick="nextAgreementPage()" style="display: none;">
+                                <span class="btn-text">下一页</span>
+                            </button>
+                            <button class="btn-large btn-primary" id="confirm-read-btn" onclick="closeAgreementModal()" style="display: none;">
+                                <span class="btn-text">已阅读，本人已知晓上述内容</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 手机话筒 -->
+                <section class="phone-speaker-wrap">
+                    <div class="phone-speaker">
+                        <div class="speaker-bar"></div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/application-info.js"></script>
+</body>
+</html>

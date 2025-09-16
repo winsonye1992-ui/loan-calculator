@@ -1,0 +1,308 @@
+/* 贷款中心页面样式 */
+
+/* 可滚动内容容器样式 */
+.scrollable-main-content {
+    height: calc(812px - 44px - 44px - 60px - 30px); /* iPhone总高度减去状态栏、导航栏、底部tab栏、手机话筒 */
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* 活动横幅样式 */
+.section {
+    margin-bottom: 24px;
+}
+
+/* 贷款服务样式 */
+.loan-services {
+    margin-bottom: 24px;
+}
+
+.service-card-container {
+    background-color: #fff;
+    border-radius: 8px;
+    margin: 0 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    overflow: hidden;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    padding: 20px 16px;
+}
+
+.service-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.service-item:hover {
+    transform: translateY(-2px);
+}
+
+.service-item:active {
+    transform: translateY(0);
+}
+
+.service-icon {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+}
+
+.service-icon-img {
+    width: 30px;
+    height: 30px;
+}
+
+.service-text {
+    font-size: 12px;
+    color: #333333;
+}
+
+/* 推荐贷款样式 */
+.recommended-loans {
+    margin-bottom: 24px;
+}
+
+.section-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--neutral-color-nc20);
+    padding: 0 16px;
+    margin-bottom: 16px;
+}
+
+/* 推荐贷款卡片容器 */
+.loan-card-container {
+    background-color: #fff;
+    border-radius: 8px;
+    margin: 0 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    overflow: hidden;
+}
+
+/* 宫格布局 */
+.loan-grid {
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr;
+    grid-template-rows: auto 1px auto 1px auto;
+}
+
+/* 宫格项 */
+.loan-item {
+    padding: 16px 8px;
+    display: flex;
+    flex-direction: column;
+    min-height: 80px;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.loan-item:hover {
+    background-color: rgba(239, 68, 68, 0.05);
+}
+
+.loan-item:active {
+    background-color: rgba(239, 68, 68, 0.1);
+}
+
+/* 第一行：标题和标签 */
+.loan-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+}
+
+.loan-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--neutral-color-nc20);
+}
+
+/* 第二行：金额数字 */
+.loan-amount {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--neutral-color-nc20);
+    margin-bottom: 4px;
+}
+
+/* 第三行：单位说明 */
+.loan-unit {
+    font-size: 10px;
+    color: var(--neutral-color-nc50);
+}
+
+/* 分割线样式 */
+.loan-divider-vertical {
+    background-color: var(--neutral-color-nc30);
+    grid-row: 1 / -1;
+    width: 1px;
+}
+
+.loan-divider-horizontal {
+    background-color: var(--neutral-color-nc30);
+    grid-column: 1 / -1;
+    height: 1px;
+}
+
+/* 宫格位置定位 */
+.loan-item:nth-child(1) { grid-column: 1; grid-row: 1; }
+.loan-divider-vertical:nth-child(2) { grid-column: 2; grid-row: 1 / 6; }
+.loan-item:nth-child(3) { grid-column: 3; grid-row: 1; }
+.loan-divider-horizontal:nth-child(4) { grid-column: 1 / -1; grid-row: 2; }
+.loan-item:nth-child(5) { grid-column: 1; grid-row: 3; }
+.loan-divider-vertical:nth-child(6) { grid-column: 2; grid-row: 3; }
+.loan-item:nth-child(7) { grid-column: 3; grid-row: 3; }
+.loan-divider-horizontal:nth-child(8) { grid-column: 1 / -1; grid-row: 4; }
+.loan-item:nth-child(9) { grid-column: 1; grid-row: 5; }
+.loan-divider-vertical:nth-child(10) { grid-column: 2; grid-row: 5; }
+.loan-item:nth-child(11) { grid-column: 3; grid-row: 5; }
+
+/* 常用功能样式 */
+.common-functions {
+    margin-bottom: 24px;
+}
+
+.function-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    padding: 0 16px;
+}
+
+.function-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.function-icon {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+}
+
+.function-icon-img {
+    width: 30px;
+    height: 30px;
+}
+
+.function-text {
+    font-size: 12px;
+    color: #333333;
+}
+
+/* 通用图标占位符样式 */
+.icon-placeholder {
+    width: 20px;
+    height: 20px;
+    background-color: var(--neutral-color-nc70);
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: #fff;
+}
+
+/* 产品容器样式 */
+.product-container {
+    background-color: #fff;
+    border-radius: 8px;
+    margin: 0 16px 24px 16px;
+    padding: 0 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+/* 产品列表样式 */
+.product-list {
+    width: 100%;
+}
+
+.product-item {
+    display: flex;
+    flex-direction: column;
+    padding: 16px 0;
+}
+
+/* 标题容器 */
+.product-header {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+.product-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--neutral-color-nc20);
+    margin-right: 12px;
+}
+
+.product-tags {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+/* 信息容器 */
+.product-info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.loan-amount-info,
+.rate-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.amount-value,
+.rate-value {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--neutral-color-nc20);
+    line-height: 1.2;
+}
+
+.amount-label,
+.rate-label {
+    font-size: 12px;
+    color: var(--neutral-color-nc50);
+    margin-top: 2px;
+}
+
+.rate-value {
+    color: #FF4500;
+}
+
+.product-action {
+    flex-shrink: 0;
+}
+
+/* 产品容器内的选项卡样式调整 */
+.product-container .top-tabs {
+    padding-top: 0;
+    padding-bottom: 0;
+}

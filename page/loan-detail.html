@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>借款记录详情 - 东莞银行直销银行</title>
+    <link rel="stylesheet" href="../src/styles/base/variables.css">
+    <link rel="stylesheet" href="../src/styles/base/section.css">
+    <link rel="stylesheet" href="../src/styles/base/element.css">
+    <link rel="stylesheet" href="../src/styles/base/iphone-preview.css">
+    <link rel="stylesheet" href="../src/styles/components/bar/status-bar.css">
+    <link rel="stylesheet" href="../src/styles/components/bar/phone-speaker.css">
+    <link rel="stylesheet" href="../src/styles/components/bar/nav-bar.css">
+    <link rel="stylesheet" href="../src/styles/components/base/button-combination.css">
+    <link rel="stylesheet" href="../css/loan-detail.css">
+</head>
+<body>
+    <div class="iphone-container">
+        <div class="iphone-notch"></div>
+        <div class="iphone-screen">
+            <div class="content-area">
+                
+                <!-- 状态栏 -->
+                <section class="statusbar-wrapper">
+                    <div class="statusbar">
+                        <div class="statusbar-time">9:41</div>
+                        <div class="statusbar-icons">
+                            <img src="../src/assets/images/signal.png" alt="信号" class="statusbar-signal">
+                            <img src="../src/assets/images/WiFi.png" alt="WiFi" class="statusbar-wifi">
+                            <img src="../src/assets/images/battery.png" alt="电池" class="statusbar-battery">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 导航栏 -->
+                <section class="pad-vertical-0">
+                    <div class="nav-bar nav-bar-white">
+                        <div class="nav-left" onclick="window.location.href='loan-record.html'">
+                            <img src="../src/assets/icons/arrow-left.svg" alt="返回" class="nav-icon">
+                        </div>
+                        <div class="nav-title">借款记录详情</div>
+                        <div class="nav-right">
+                            <img src="../assets/icons/more.svg" alt="更多" class="nav-icon">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 可滚动内容容器 -->
+                <div class="scrollable-main-content">
+                    
+                    <!-- 剩余应还本金 -->
+                    <section class="info-section highlight-section">
+                        <div class="amount-display">
+                            <div class="amount-label">剩余应还本金</div>
+                            <div class="amount-value">￥28,500.00</div>
+                        </div>
+                        <div class="rate-note">
+                            本笔贷款年利率为固定利率，年利率6.8%，在贷款期限内，该利率保持不变。
+                        </div>
+                    </section>
+
+                    <!-- 借款人信息 -->
+                    <section class="info-section">
+                        <div class="info-item">
+                            <div class="info-label">借款人姓名</div>
+                            <div class="info-value">张三</div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-label">合同编号</div>
+                            <div class="info-value">DGYH20240012345</div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-label">合同期限</div>
+                            <div class="info-value">2024/01/15 - 2024/12/15</div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-label">借据编号</div>
+                            <div class="info-value">BJ20240015678</div>
+                        </div>
+                    </section>
+
+                    <!-- 合同文件 -->
+                    <section class="info-section">
+                        <div class="info-item clickable">
+                            <div class="info-label">贷款合同</div>
+                            <div class="info-value link-value">查看</div>
+                        </div>
+                    </section>
+
+                    <!-- 借款信息 -->
+                    <section class="info-section">
+                        <div class="info-item">
+                            <div class="info-label">借款金额(元)</div>
+                            <div class="info-value">50,000.00</div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-label">借款期限(月)</div>
+                            <div class="info-value">12</div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-label">还款方式</div>
+                            <div class="info-value">等额本息</div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-label">还款间隔</div>
+                            <div class="info-value">每月</div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-label">还款账户</div>
+                            <div class="info-value">6222 **** 3456</div>
+                        </div>
+                    </section>
+
+                    <!-- 支付信息 -->
+                    <section class="info-section">
+                        <div class="info-item">
+                            <div class="info-label">支付方式</div>
+                            <div class="info-value">受托支付</div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-label">收款账户</div>
+                            <div class="info-value">6217 **** 7890</div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-label">户名</div>
+                            <div class="info-value">张三</div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-label">银行</div>
+                            <div class="info-value">东莞银行</div>
+                        </div>
+                    </section>
+
+                    <!-- 功能入口 -->
+                    <section class="info-section">
+                        <div class="info-item clickable" onclick="window.location.href='repayment-plan.html'">
+                            <div class="info-label">还款计划</div>
+                            <div class="info-value">
+                                <img src="../src/assets/icons/arrow-right.svg" alt="查看" class="arrow-icon">
+                            </div>
+                        </div>
+
+                        <div class="info-item clickable" onclick="window.location.href='repayment-history.html'">
+                            <div class="info-label">还款记录</div>
+                            <div class="info-value">
+                                <img src="../src/assets/icons/arrow-right.svg" alt="查看" class="arrow-icon">
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+
+                         <!-- 一行两个按钮 -->
+         <section class="section">
+             <div class="btn-group-2">
+                 <button class="btn-large btn-secondary" onclick="window.location.href='loan-record.html'">
+                     <span class="btn-text">返回</span>
+                 </button>
+                 <button class="btn-large btn-primary" id="prepay-btn">
+                     <span class="btn-text">提前还款</span>
+                 </button>
+             </div>
+         </section>
+
+                <!-- 手机话筒 -->
+                <section class="phone-speaker-wrap">
+                    <div class="phone-speaker">
+                        <div class="speaker-bar"></div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/loan-detail.js"></script>
+</body>
+</html>

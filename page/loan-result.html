@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>结果页 - 东莞银行直销银行</title>
+    <link rel="stylesheet" href="../src/styles/base/variables.css">
+    <link rel="stylesheet" href="../src/styles/base/section.css">
+    <link rel="stylesheet" href="../src/styles/base/element.css">
+    <link rel="stylesheet" href="../src/styles/base/iphone-preview.css">
+    <link rel="stylesheet" href="../src/styles/components/bar/status-bar.css">
+    <link rel="stylesheet" href="../src/styles/components/bar/phone-speaker.css">
+    <link rel="stylesheet" href="../src/styles/components/bar/nav-bar.css">
+    <link rel="stylesheet" href="../css/loan-result.css">
+</head>
+<body>
+    <div class="iphone-container">
+        <div class="iphone-notch"></div>
+        <div class="iphone-screen">
+            <div class="content-area">
+                
+                <!-- 状态栏 -->
+                <section class="statusbar-wrapper">
+                    <div class="statusbar">
+                        <div class="statusbar-time">9:41</div>
+                        <div class="statusbar-icons">
+                            <img src="../src/assets/images/signal.png" alt="信号" class="statusbar-signal">
+                            <img src="../src/assets/images/WiFi.png" alt="WiFi" class="statusbar-wifi">
+                            <img src="../src/assets/images/battery.png" alt="电池" class="statusbar-battery">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 导航栏 -->
+                <section class="pad-vertical-0">
+                    <div class="nav-bar nav-bar-white">
+                        <div class="nav-left" onclick="window.location.href='material-upload.html'">
+                            <img src="../src/assets/icons/arrow-left.svg" alt="返回" class="nav-icon">
+                        </div>
+                        <div class="nav-title">结果页</div>
+                        <div class="nav-right">
+                            <img src="../assets/icons/more.svg" alt="更多" class="nav-icon">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 可滚动内容容器 -->
+                <div class="scrollable-main-content">
+                    
+                    <!-- 加载状态区域 -->
+                    <div class="loading-section" id="loading-section">
+                        <div class="loading-container">
+                            <!-- 加载动画 -->
+                            <div class="loading-spinner">
+                                <svg class="spinner" viewBox="0 0 50 50">
+                                    <circle class="path" cx="25" cy="25" r="20" fill="none" 
+                                            stroke="#FFB347" stroke-width="3" stroke-linecap="round" 
+                                            stroke-dasharray="31.416" stroke-dashoffset="31.416">
+                                    </circle>
+                                </svg>
+                            </div>
+                            <div class="loading-text">放款中...</div>
+                        </div>
+                    </div>
+
+                    <!-- 成功状态区域 -->
+                    <div class="success-section" id="success-section" style="display: none;">
+                        <!-- 成功图标区域 -->
+                        <div class="result-illustration">
+                            <div class="illustration-container">
+                                <!-- 成功图标 -->
+                                <div class="success-icon">
+                                    <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <!-- 背景圆圈 -->
+                                        <circle cx="60" cy="60" r="50" fill="#4CAF50"/>
+                                        <!-- 对勾 -->
+                                        <path d="M35 60L50 75L85 40" stroke="white" stroke-width="4" 
+                                              stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 状态文字区域 -->
+                        <div class="status-section">
+                            <h2 class="status-title">提交成功</h2>
+                            <p class="status-description">您的借款金额为<span class="amount-highlight">600.00</span>元，银行正在进行放款审批</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- 全宽按钮 -->
+                <section class="section">
+                    <div class="btn-group">
+                        <button class="btn-large btn-primary" id="complete-btn" onclick="window.location.href='loan-home.html'">
+                            <span class="btn-text">完成</span>
+                        </button>
+                    </div>
+                </section>
+
+                <!-- 手机话筒 -->
+                <section class="phone-speaker-wrap">
+                    <div class="phone-speaker">
+                        <div class="speaker-bar"></div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/loan-result.js"></script>
+</body>
+</html>

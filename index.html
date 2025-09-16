@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>贷款中心 - 东莞银行直销银行</title>
+    <link rel="stylesheet" href="src/styles/base/variables.css">
+    <link rel="stylesheet" href="src/styles/base/section.css">
+    <link rel="stylesheet" href="src/styles/base/element.css">
+    <link rel="stylesheet" href="src/styles/base/iphone-preview.css">
+    <link rel="stylesheet" href="src/styles/components/bar/status-bar.css">
+    <link rel="stylesheet" href="src/styles/components/bar/phone-speaker.css">
+    <link rel="stylesheet" href="src/styles/components/bar/nav-bar.css">
+    <link rel="stylesheet" href="src/styles/components/bar/tab-bar.css">
+    <link rel="stylesheet" href="src/styles/components/bar/top-tabs.css">
+    <link rel="stylesheet" href="src/styles/components/base/carousel.css">
+    <link rel="stylesheet" href="src/styles/components/business/product-card.css">
+    <link rel="stylesheet" href="css/loan-center.css">
+    <script src="src/js/bar/tab-bar.js"></script>
+    <script src="src/js/bar/top-tabs.js"></script>
+    <script src="src/js/base/carousel.js"></script>
+</head>
+<body>
+    <div class="iphone-container">
+        <div class="iphone-notch"></div>
+        <div class="iphone-screen">
+            <div class="content-area">
+                
+                <!-- 状态栏 -->
+                <section class="statusbar-wrapper">
+                    <div class="statusbar">
+                        <div class="statusbar-time">9:41</div>
+                        <div class="statusbar-icons">
+                            <img src="src/assets/images/signal.png" alt="信号" class="statusbar-signal">
+                            <img src="src/assets/images/WiFi.png" alt="WiFi" class="statusbar-wifi">
+                            <img src="src/assets/images/battery.png" alt="电池" class="statusbar-battery">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 导航栏 -->
+                <section class="pad-vertical-0">
+                    <div class="nav-bar nav-bar-white">
+                        <div class="nav-left">
+                            <img src="assets/icons/close.svg" alt="关闭" class="nav-icon">
+                        </div>
+                        <div class="nav-title">贷款中心</div>
+                        <div class="nav-right">
+                            <img src="assets/icons/more.svg" alt="更多" class="nav-icon">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 可滚动内容容器 -->
+                <div class="scrollable-main-content">
+                    <!-- 活动横幅 -->
+                <section class="section">
+                    <div class="carousel-container-larger">
+                        <div class="carousel-content">
+                            <div class="white-area">
+                                <img src="assets/images/banner.png" alt="双十一专场">
+                                <img src="assets/images/banner.png" alt="活动横幅2" style="display: none;">
+                            </div>
+                        </div>
+                        <div class="carousel-dots">
+                            <span class="carousel-dot active"></span>
+                            <span class="carousel-dot"></span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 贷款服务 -->
+                 <!-- 常用功能 -->
+                <section class="common-functions">
+                    <div class="section-title">贷款服务</div>
+                    <div class="function-grid">
+                        <div class="function-item">
+                            <div class="function-icon">
+                                <img src="assets/icons/daikuanjisuan.svg" alt="贷款计算器" class="function-icon-img">
+                            </div>
+                            <div class="function-text">贷款计算器</div>
+                        </div>
+                        <div class="function-item">
+                            <div class="function-icon">
+                                <img src="assets/icons/huankuanjihua.svg" alt="查看还款计划" class="function-icon-img">
+                            </div>
+                            <div class="function-text">查看还款计划</div>
+                        </div>
+                        <div class="function-item">
+                            <div class="function-icon">
+                                <img src="assets/icons/jieqingzhengming.svg" alt="结清证明" class="function-icon-img">
+                            </div>
+                            <div class="function-text">结清证明</div>
+                        </div>
+                        <div class="function-item">
+                            <div class="function-icon">
+                                <img src="assets/icons/xinxibiangeng.svg" alt="个人信息变更" class="function-icon-img">
+                            </div>
+                            <div class="function-text">个人信息变更</div>
+                        </div>
+                        <div class="function-item">
+                            <div class="function-icon">
+                                <img src="assets/icons/wodexieyi.svg" alt="我的协议" class="function-icon-img">
+                            </div>
+                            <div class="function-text">我的协议</div>
+                        </div>
+                        <div class="function-item">
+                            <div class="function-icon">
+                                <img src="assets/icons/changjianwenti.svg" alt="常见问题" class="function-icon-img">
+                            </div>
+                            <div class="function-text">常见问题</div>
+                        </div>
+                        <div class="function-item">
+                            <div class="function-icon">
+                                <img src="assets/icons/daitahuankuan.svg" alt="代付还款" class="function-icon-img">
+                            </div>
+                            <div class="function-text">代付还款</div>
+                        </div>
+                        <div class="function-item">
+                            <div class="function-icon">
+                                <img src="assets/icons/huankuanqianyue.svg" alt="代扣签约" class="function-icon-img">
+                            </div>
+                            <div class="function-text">代扣签约</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 推荐贷款 -->
+                <section class="recommended-loans">
+                    <div class="section-title">推荐贷款</div>
+                    <div class="loan-card-container">
+                        <div class="loan-grid">
+                            <div class="loan-item" onclick="window.location.href='page/product-detail.html'">
+                                <div class="loan-header">
+                                    <div class="loan-name">经营E贷</div>
+                                    <div class="property-tag blue">产品特点</div>
+                                </div>
+                                <div class="loan-amount">30万</div>
+                                <div class="loan-unit">最高可借（元）</div>
+                            </div>
+                            
+                            <!-- 垂直分割线 -->
+                            <div class="loan-divider-vertical"></div>
+                            
+                            <div class="loan-item">
+                                <div class="loan-header">
+                                    <div class="loan-name">优职贷</div>
+                                    <div class="property-tag blue">实时审批</div>
+                                </div>
+                                <div class="loan-amount">500万</div>
+                                <div class="loan-unit">最高可借（元）</div>
+                            </div>
+                            
+                            <!-- 水平分割线 -->
+                            <div class="loan-divider-horizontal"></div>
+                            
+                            <div class="loan-item">
+                                <div class="loan-header">
+                                    <div class="loan-name">创业E贷</div>
+                                    <div class="property-tag blue">线上申请</div>
+                                </div>
+                                <div class="loan-amount">300万</div>
+                                <div class="loan-unit">最高可借（元）</div>
+                            </div>
+                            
+                            <!-- 垂直分割线 -->
+                            <div class="loan-divider-vertical"></div>
+                            
+                            <div class="loan-item">
+                                <div class="loan-header">
+                                    <div class="loan-name">安家抵押贷</div>
+                                    <div class="property-tag blue">以房抵押</div>
+                                </div>
+                                <div class="loan-amount">500万</div>
+                                <div class="loan-unit">最高可借（元）</div>
+                            </div>
+                            
+                            <!-- 水平分割线 -->
+                            <div class="loan-divider-horizontal"></div>
+                            
+                            <div class="loan-item">
+                                <div class="loan-header">
+                                    <div class="loan-name">托管E贷</div>
+                                    <div class="property-tag blue">纯信用</div>
+                                </div>
+                                <div class="loan-amount">1000万</div>
+                                <div class="loan-unit">最高可借（元）</div>
+                            </div>
+                            
+                            <!-- 垂直分割线 -->
+                            <div class="loan-divider-vertical"></div>
+                            
+                            <div class="loan-item">
+                                <div class="loan-header">
+                                    <div class="loan-name">车位贷</div>
+                                    <div class="property-tag blue">线上审批</div>
+                                </div>
+                                <div class="loan-amount">100万</div>
+                                <div class="loan-unit">最高可借（元）</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 产品容器 (包含选项卡和列表) -->
+                <section class="product-container">
+                    <!-- 产品选项卡 -->
+                    <nav class="top-tabs" data-default-index="1">
+                        <div class="top-tabs-item">
+                            <div class="top-tabs-text">我要消费</div>
+                        </div>
+                        <div class="top-tabs-item active">
+                            <div class="top-tabs-text">我要经营</div>
+                            <div class="indicator"><img src="src/assets/images/tab_on.png" class="tab_on_img"></div>
+                        </div>
+                        <div class="top-tabs-item">
+                            <div class="top-tabs-text">我要购房</div>
+                        </div>
+                    </nav>
+
+                    <!-- 产品列表 -->
+                    <div class="product-list">
+                    <section class="product-item">
+                        <!-- 标题容器 -->
+                        <div class="product-header">
+                            <div class="product-title">经营e贷</div>
+                            <div class="product-tags">
+                                <div class="property-tag blue">纯信用</div>
+                                <div class="property-tag blue">差异化</div>
+                                <div class="property-tag blue">数据驱动</div>
+                            </div>
+                        </div>
+                        <!-- 信息容器 -->
+                        <div class="product-info-row">
+                            <div class="loan-amount-info">
+                                <div class="amount-value">3,000,000</div>
+                                <div class="amount-label">最高可得（元）</div>
+                            </div>
+                            <div class="rate-info">
+                                <div class="rate-value">4.8%</div>
+                                <div class="rate-label">利率低至</div>
+                            </div>
+                            <div class="product-action">
+                                <button class="btn-small btn-primary" onclick="window.location.href='page/loan-home.html'">
+                                    <span class="btn-text">了解详情</span>
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <!-- 分割线 -->
+                    <div class="ele-line"></div>
+                    
+                    <section class="product-item">
+                        <!-- 标题容器 -->
+                        <div class="product-header">
+                            <div class="product-title">车位贷</div>
+                            <div class="product-tags">
+                                <div class="property-tag blue">产品特点1</div>
+                                <div class="property-tag blue">产品特点2</div>
+                                <div class="property-tag blue">产品特点3</div>
+                            </div>
+                        </div>
+                        <!-- 信息容器 -->
+                        <div class="product-info-row">
+                            <div class="loan-amount-info">
+                                <div class="amount-value">300,000.00</div>
+                                <div class="amount-label">最高可得（元）</div>
+                            </div>
+                            <div class="rate-info">
+                                <div class="rate-value">3.45%</div>
+                                <div class="rate-label">利率低至</div>
+                            </div>
+                            <div class="product-action">
+                                <button class="btn-small btn-primary">
+                                    <span class="btn-text">了解详情</span>
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <!-- 分割线 -->
+                    <div class="ele-line"></div>
+                    
+                    <section class="product-item">
+                        <!-- 标题容器 -->
+                        <div class="product-header">
+                            <div class="product-title">莞易贷</div>
+                            <div class="product-tags">
+                                <div class="property-tag blue">全程对接</div>
+                                <div class="property-tag blue">放款快</div>
+                                <div class="property-tag blue">随借随还</div>
+                            </div>
+                        </div>
+                        <!-- 信息容器 -->
+                        <div class="product-info-row">
+                            <div class="loan-amount-info">
+                                <div class="amount-value">300,000.00</div>
+                                <div class="amount-label">最高可得（元）</div>
+                            </div>
+                            <div class="rate-info">
+                                <div class="rate-value">3.45%</div>
+                                <div class="rate-label">利率低至</div>
+                            </div>
+                            <div class="product-action">
+                                <button class="btn-small btn-primary">
+                                    <span class="btn-text">了解详情</span>
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <!-- 分割线 -->
+                    <div class="ele-line"></div>
+                    
+                    <section class="product-item">
+                        <!-- 标题容器 -->
+                        <div class="product-header">
+                            <div class="product-title">优职贷</div>
+                            <div class="product-tags">
+                                <div class="property-tag blue">产品特色</div>
+                            </div>
+                        </div>
+                        <!-- 信息容器 -->
+                        <div class="product-info-row">
+                            <div class="loan-amount-info">
+                                <div class="amount-value">300,000.00</div>
+                                <div class="amount-label">最高可得（元）</div>
+                            </div>
+                            <div class="rate-info">
+                                <div class="rate-value">3.45%</div>
+                                <div class="rate-label">利率低至</div>
+                            </div>
+                            <div class="product-action">
+                                <button class="btn-small btn-primary">
+                                    <span class="btn-text">了解详情</span>
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <!-- 分割线 -->
+                    <div class="ele-line"></div>
+                    
+                    <section class="product-item">
+                        <!-- 标题容器 -->
+                        <div class="product-header">
+                            <div class="product-title">个人住房贷款</div>
+                            <div class="product-tags">
+                                <div class="property-tag blue">产品特色</div>
+                            </div>
+                        </div>
+                        <!-- 信息容器 -->
+                        <div class="product-info-row">
+                            <div class="loan-amount-info">
+                                <div class="amount-value">房屋价值7成</div>
+                                <div class="amount-label"></div>
+                            </div>
+                            <div class="rate-info">
+                                <div class="rate-value"></div>
+                                <div class="rate-label"></div>
+                            </div>
+                            <div class="product-action">
+                                <button class="btn-small btn-primary">
+                                    <span class="btn-text">了解详情</span>
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <!-- 分割线 -->
+                    <div class="ele-line"></div>
+                    
+                    <section class="product-item">
+                        <!-- 标题容器 -->
+                        <div class="product-header">
+                            <div class="product-title">托管E贷</div>
+                            <div class="product-tags">
+                                <div class="property-tag blue">产品优势1</div>
+                            </div>
+                        </div>
+                        <!-- 信息容器 -->
+                        <div class="product-info-row">
+                            <div class="loan-amount-info">
+                                <div class="amount-value">300,000.00</div>
+                                <div class="amount-label">最高可得（元）</div>
+                            </div>
+                            <div class="rate-info">
+                                <div class="rate-value">3.45%</div>
+                                <div class="rate-label">利率低至</div>
+                            </div>
+                            <div class="product-action">
+                                <button class="btn-small btn-primary">
+                                    <span class="btn-text">了解详情</span>
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+                    </div>
+                </section>
+
+                </div>
+
+                <!-- 底部导航 -->
+                <section class="pad-vertical-0">
+                    <nav class="tab-bar" data-default-tab="daikuan">
+                        <div class="tab-item active">
+                            <div class="tab-icon">
+                                <img src="assets/icons/ic_chanpingliebiao@1x.png" alt="贷款中心" class="tab-icon-img">
+                            </div>
+                            <div class="tab-text">贷款中心</div>
+                        </div>
+                        <div class="tab-item">
+                            <div class="tab-icon">
+                                <img src="assets/icons/ic_wodelicai-灰@1x.png" alt="我的贷款" class="tab-icon-img">
+                            </div>
+                            <div class="tab-text">我的贷款</div>
+                        </div>
+                    </nav>
+                </section>
+
+                <!-- 手机话筒 -->
+                <section class="phone-speaker-wrap">
+                    <div class="phone-speaker">
+                        <div class="speaker-bar"></div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

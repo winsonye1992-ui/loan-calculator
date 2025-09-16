@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>借款记录 - 东莞银行直销银行</title>
+    <link rel="stylesheet" href="../src/styles/base/variables.css">
+    <link rel="stylesheet" href="../src/styles/base/section.css">
+    <link rel="stylesheet" href="../src/styles/base/element.css">
+    <link rel="stylesheet" href="../src/styles/base/iphone-preview.css">
+    <link rel="stylesheet" href="../src/styles/components/bar/status-bar.css">
+    <link rel="stylesheet" href="../src/styles/components/bar/phone-speaker.css">
+    <link rel="stylesheet" href="../src/styles/components/bar/nav-bar.css">
+    <link rel="stylesheet" href="../css/loan-record.css">
+</head>
+<body>
+    <div class="iphone-container">
+        <div class="iphone-notch"></div>
+        <div class="iphone-screen">
+            <div class="content-area">
+                
+                <!-- 状态栏 -->
+                <section class="statusbar-wrapper">
+                    <div class="statusbar">
+                        <div class="statusbar-time">9:41</div>
+                        <div class="statusbar-icons">
+                            <img src="../src/assets/images/signal.png" alt="信号" class="statusbar-signal">
+                            <img src="../src/assets/images/WiFi.png" alt="WiFi" class="statusbar-wifi">
+                            <img src="../src/assets/images/battery.png" alt="电池" class="statusbar-battery">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 导航栏 -->
+                <section class="pad-vertical-0">
+                    <div class="nav-bar nav-bar-white">
+                        <div class="nav-left" onclick="window.location.href='product-detail.html'">
+                            <img src="../src/assets/icons/arrow-left.svg" alt="返回" class="nav-icon">
+                        </div>
+                        <div class="nav-title">借款记录</div>
+                        <div class="nav-right">
+                            <img src="../assets/icons/more.svg" alt="更多" class="nav-icon">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 可滚动内容容器 -->
+                <div class="scrollable-main-content">
+                    
+                    <!-- 统计信息 -->
+                    <div class="summary-info">
+                        <span class="summary-text">共2笔借款未结清，剩余应还总本金150,000元</span>
+                        <button class="show-all-btn">显示全部</button>
+                    </div>
+
+                    <!-- 借款记录列表 -->
+                    <div class="loan-list">
+                        
+                        <!-- 借款记录项 1：逾期 -->
+                        <div class="loan-item" onclick="window.location.href='loan-detail.html'">
+                            <div class="loan-header">
+                                <div class="loan-date">借款时间2024.08.15</div>
+                                <div class="loan-status overdue">逾期 ></div>
+                            </div>
+                            <div class="loan-amounts">
+                                <div class="loan-amount-item">
+                                    <div class="amount-value">180,000.00</div>
+                                    <div class="amount-label">借据金额(元)</div>
+                                </div>
+                                <div class="loan-amount-item">
+                                    <div class="amount-value red">120,000.00</div>
+                                    <div class="amount-label">剩余应还本金(元)</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 借款记录项 2：正常 -->
+                        <div class="loan-item" onclick="window.location.href='loan-detail.html'">
+                            <div class="loan-header">
+                                <div class="loan-date">借款时间2024.10.20</div>
+                                <div class="loan-status normal">正常 ></div>
+                            </div>
+                            <div class="loan-amounts">
+                                <div class="loan-amount-item">
+                                    <div class="amount-value">150,000.00</div>
+                                    <div class="amount-label">借据金额(元)</div>
+                                </div>
+                                <div class="loan-amount-item">
+                                    <div class="amount-value red">30,000.00</div>
+                                    <div class="amount-label">剩余应还本金(元)</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 借款记录项 3：结清 -->
+                        <div class="loan-item" onclick="window.location.href='loan-detail.html'">
+                            <div class="loan-header">
+                                <div class="loan-date">借款时间2024.06.10</div>
+                                <div class="loan-status settled">结清 ></div>
+                            </div>
+                            <div class="loan-amounts">
+                                <div class="loan-amount-item">
+                                    <div class="amount-value">120,000.00</div>
+                                    <div class="amount-label">借据金额(元)</div>
+                                </div>
+                                <div class="loan-amount-item">
+                                    <div class="amount-value">0.00</div>
+                                    <div class="amount-label">剩余应还本金(元)</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- 手机话筒 -->
+                <section class="phone-speaker-wrap">
+                    <div class="phone-speaker">
+                        <div class="speaker-bar"></div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

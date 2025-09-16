@@ -1,0 +1,317 @@
+/* 上传页面样式 */
+
+/* 内容区域 */
+.content-area {
+    position: relative;
+}
+
+/* 可滚动内容区域 */
+.scrollable-main-content {
+    height: calc(812px - 44px - 44px - 72px - 30px - 40px + 40px); /* 减去状态栏44 + 导航栏44 + 按钮区72 + 话筒30 + 内边距上下20*2，增加40px */
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 20px;
+}
+
+/* 上传区域 */
+.upload-section {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 上传区域容器 */
+.upload-area {
+    background: #F8F8F8;
+    border: 2px dashed #E0E0E0;
+    border-radius: 8px;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.upload-area:hover {
+    border-color: var(--primary-color-red50);
+    background: #FAFAFA;
+}
+
+.upload-area.dragover {
+    border-color: var(--primary-color-red50);
+    background: rgba(239, 68, 68, 0.05);
+}
+
+/* 上传占位符 */
+.upload-placeholder {
+    text-align: center;
+    color: #999999;
+}
+
+.upload-icon {
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: center;
+}
+
+.upload-text {
+    font-size: 16px;
+    color: #666666;
+    margin-bottom: 8px;
+}
+
+.upload-count {
+    font-size: 14px;
+    color: #999999;
+}
+
+/* 已上传文件列表 */
+.uploaded-files {
+    margin-top: 20px;
+    flex: 1;
+}
+
+.file-item {
+    background: white;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid #F0F0F0;
+}
+
+.file-info {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.file-icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #F5F5F5;
+    border-radius: 4px;
+    font-size: 12px;
+    color: #666;
+    font-weight: 500;
+}
+
+.file-details {
+    flex: 1;
+}
+
+.file-name {
+    font-size: 14px;
+    color: var(--neutral-color-nc90);
+    font-weight: 500;
+    margin-bottom: 4px;
+    word-break: break-all;
+}
+
+.file-size {
+    font-size: 12px;
+    color: var(--neutral-color-nc50);
+}
+
+.file-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.file-delete {
+    width: 24px;
+    height: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.6;
+    transition: opacity 0.2s;
+}
+
+.file-delete:hover {
+    opacity: 1;
+}
+
+.file-delete svg {
+    width: 16px;
+    height: 16px;
+    fill: #999;
+}
+
+/* 上传进度 */
+.upload-progress {
+    margin-top: 8px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 4px;
+    background: #F0F0F0;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--primary-color-red50);
+    transition: width 0.3s ease;
+    border-radius: 2px;
+}
+
+.progress-text {
+    font-size: 12px;
+    color: var(--neutral-color-nc50);
+    margin-top: 4px;
+    text-align: right;
+}
+
+/* 按钮区域 */
+.btn-group {
+    padding: 0;
+}
+
+/* 短信验证弹层样式 */
+.base-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.popup-container {
+    width: 100%;
+    max-width: 375px;
+}
+
+/* 数字键盘样式 */
+.number-keyboard {
+    margin-top: 20px;
+    padding: 20px 0;
+    background: #F8F9FA;
+    border-radius: 8px 8px 0 0;
+}
+
+.keyboard-row {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 12px;
+}
+
+.keyboard-row:last-child {
+    margin-bottom: 0;
+}
+
+.keyboard-btn {
+    width: 80px;
+    height: 54px;
+    background: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 24px;
+    font-weight: 500;
+    color: #333;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.keyboard-btn:active {
+    background: #F0F0F0;
+    transform: scale(0.95);
+}
+
+.keyboard-btn-empty {
+    background: transparent;
+    box-shadow: none;
+    cursor: default;
+}
+
+.keyboard-btn-empty:active {
+    background: transparent;
+    transform: none;
+}
+
+.keyboard-btn-delete {
+    background: #E8E8E8;
+}
+
+.keyboard-btn-delete:active {
+    background: #D0D0D0;
+}
+
+/* 输入错误样式调整 */
+.input-error {
+    margin-top: 8px;
+    padding: 0 16px;
+    font-size: 12px;
+    color: var(--primary-color-red60);
+}
+
+/* 获取验证码按钮禁用状态 */
+.get-code-button.disabled {
+    background: #F0F0F0;
+    color: #999;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* 空状态提示 */
+.empty-state {
+    text-align: center;
+    padding: 40px 20px;
+    color: #999;
+}
+
+.empty-state-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 16px;
+    opacity: 0.5;
+}
+
+.empty-state-text {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.empty-state-hint {
+    font-size: 14px;
+    color: #CCC;
+}
+
+/* 响应式调整 */
+@media (max-width: 375px) {
+    .scrollable-main-content {
+        padding: 16px;
+    }
+    
+    .file-item {
+        padding: 12px;
+    }
+    
+    .file-name {
+        font-size: 13px;
+    }
+}

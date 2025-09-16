@@ -1,0 +1,26 @@
+/* 上传身份证页面样式 */
+
+/* 可滚动内容容器样式 */
+.scrollable-main-content {
+    height: calc(812px - 44px - 44px - 72px - 30px); /* iPhone总高度减去状态栏、导航栏、按钮区域(40px+32px padding)、手机话筒 */
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: #f5f5f5;
+}
+
+/* 使用组件库样式，保持居中布局 */
+.scrollable-main-content .section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+
+
+/* 响应式调整 */
+@media (max-width: 375px) {
+    .scrollable-main-content {
+        height: calc(100vh - 44px - 44px - 72px - 30px);
+    }
+}

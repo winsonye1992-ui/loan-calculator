@@ -1,0 +1,366 @@
+/* 申请信息登记页面样式 */
+
+/* 可滚动内容容器样式 */
+.scrollable-main-content {
+    height: calc(812px - 44px - 44px - 72px - 30px + 40px); /* iPhone总高度减去状态栏、导航栏、按钮区域、手机话筒，增加40px */
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: #f5f5f5;
+}
+
+/* 信息区块 */
+.info-section {
+    background-color: white;
+    margin-bottom: 10px;
+    padding: 16px;
+}
+
+.info-section:first-child {
+    margin-top: 0;
+}
+
+/* 区块标题 */
+.section-header {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--neutral-color-nc20);
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--neutral-color-nc30);
+}
+
+/* 表单项 */
+.form-item {
+    margin-bottom: 16px;
+}
+
+.form-item:last-child {
+    margin-bottom: 0;
+}
+
+.form-label {
+    font-size: 14px;
+    color: var(--neutral-color-nc40);
+}
+
+.form-input {
+    position: relative;
+}
+
+.form-input input,
+.form-input textarea {
+    width: 180px;
+    border: none;
+    border-radius: 0;
+    font-size: 14px;
+    background-color: transparent;
+    box-sizing: border-box;
+    font-family: inherit;
+    line-height: 1.5;
+    overflow: hidden;
+    resize: none;
+}
+
+/* 单独为textarea设置垂直居中的padding */
+.form-input textarea {
+    padding: 16px 0 8px 0;
+}
+
+.form-input input:disabled,
+.form-input textarea:disabled {
+    background-color: transparent;
+    color: var(--neutral-color-nc50);
+}
+
+.form-input input:focus,
+.form-input textarea:focus {
+    outline: none;
+}
+
+/* 企业名称和企业注册地右对齐 */
+#company-name,
+#company-address {
+    text-align: right;
+}
+
+/* 企业名称和企业注册地placeholder右对齐 */
+#company-name::placeholder,
+#company-address::placeholder {
+    text-align: right;
+}
+
+/* 企业名称自动补充样式 */
+.form-input {
+    position: relative;
+}
+
+.suggestion-list {
+    position: absolute;
+    top: 100%;
+    left: -180px;
+    right: 0;
+    background: white;
+    border: 1px solid var(--neutral-color-nc30);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    max-height: 200px;
+    overflow-y: auto;
+    width: 343px;
+    margin: 0 16px;
+}
+
+.suggestion-item {
+    padding: 12px 16px;
+    cursor: pointer;
+    border-bottom: 1px solid var(--neutral-color-nc30);
+    transition: background-color 0.2s;
+}
+
+.suggestion-item:last-child {
+    border-bottom: none;
+}
+
+.suggestion-item:hover,
+.suggestion-item.hover {
+    background-color: var(--neutral-color-nc30);
+}
+
+.suggestion-name {
+    font-size: 14px;
+    color: var(--neutral-color-nc20);
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+/* 单选按钮组 */
+.radio-group {
+    display: flex;
+    gap: 24px;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.radio-option input[type="radio"] {
+    margin-right: 8px;
+    width: 16px;
+    height: 16px;
+}
+
+.radio-text {
+    font-size: 14px;
+    color: var(--neutral-color-nc40);
+}
+
+/* 税务授权按钮 */
+.tax-auth-button {
+    margin-bottom: 12px;
+}
+
+.auth-btn {
+    background-color: #1890FF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.auth-btn:hover {
+    background-color: #40A9FF;
+}
+
+/* 授权提示 */
+.auth-tip {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 16px;
+    padding: 12px;
+    background-color: #FFF7E6;
+    border: 1px solid #FFD591;
+    border-radius: 4px;
+}
+
+.tip-icon {
+    font-size: 16px;
+    flex-shrink: 0;
+}
+
+.tip-text {
+    font-size: 12px;
+    color: #D48806;
+    line-height: 1.4;
+}
+
+
+
+/* 协议同意区域 */
+.agreement-section {
+    margin-top: 8px;
+}
+
+.checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.checkbox input[type="checkbox"] {
+    margin-top: 2px;
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+.checkbox__text {
+    font-size: 12px;
+    color: var(--neutral-color-nc40);
+    line-height: 1.5;
+}
+
+.agreement-link {
+    color: #FF4D4F;
+    text-decoration: none;
+}
+
+.agreement-link:hover {
+    text-decoration: underline;
+}
+
+/* 响应式调整 */
+@media (max-width: 375px) {
+    .scrollable-main-content {
+        height: calc(100vh - 44px - 44px - 72px - 30px);
+    }
+    
+    .info-section {
+        padding: 14px;
+    }
+    
+    .radio-group {
+        gap: 16px;
+    }
+}
+
+/* 协议预览弹层样式 */
+.agreement-modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10000;
+}
+
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 350px;
+    max-height: 70vh;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--neutral-color-nc30);
+}
+
+.modal-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--neutral-color-nc20);
+}
+
+.modal-close {
+    cursor: pointer;
+    padding: 4px;
+}
+
+.modal-close img {
+    width: 20px;
+    height: 20px;
+}
+
+.modal-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.agreement-content {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333333;
+}
+
+.agreement-content h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 12px;
+}
+
+.agreement-content p {
+    margin-bottom: 12px;
+    color: #333333;
+}
+
+/* 协议页面样式 */
+.agreement-page {
+    padding: 0;
+}
+
+.agreement-page h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 16px;
+    text-align: center;
+    border-bottom: 2px solid var(--neutral-color-nc30);
+    padding-bottom: 12px;
+}
+
+.agreement-page h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 12px;
+}
+
+.agreement-page p {
+    margin-bottom: 12px;
+    color: #333333;
+    text-align: justify;
+}
+
+.modal-footer {
+    padding: 16px 20px;
+    border-top: 1px solid var(--neutral-color-nc30);
+}

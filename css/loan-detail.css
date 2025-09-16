@@ -1,0 +1,194 @@
+/* 借款记录详情页样式 */
+
+/* 内容区域 */
+.content-area {
+    position: relative;
+}
+
+/* 可滚动内容区域 */
+.scrollable-main-content {
+    height: calc(812px - 44px - 44px - 72px - 30px + 40px); /* 减去状态栏44 + 导航栏44 + 按钮区72 + 话筒30，增加40px */
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* 信息区块 */
+.info-section {
+    background: white;
+    margin-bottom: 8px;
+}
+
+.info-section:last-child {
+    margin-bottom: 0;
+}
+
+/* 高亮区块（剩余应还本金） */
+.highlight-section {
+    padding: 24px 20px;
+    background: white;
+}
+
+/* 金额展示区域 */
+.amount-display {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.amount-label {
+    font-size: 14px;
+    color: var(--neutral-color-nc60);
+    margin-bottom: 8px;
+}
+
+.amount-value {
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--neutral-color-nc90);
+    line-height: 1.2;
+}
+
+/* 利率说明 */
+.rate-note {
+    font-size: 12px;
+    color: var(--neutral-color-nc50);
+    line-height: 1.5;
+    text-align: center;
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+/* 信息项 */
+.info-item {
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--neutral-color-nc20);
+}
+
+.info-item:last-child {
+    border-bottom: none;
+}
+
+.info-label {
+    font-size: 16px;
+    color: var(--neutral-color-nc70);
+    min-width: 100px;
+}
+
+.info-value {
+    font-size: 16px;
+    color: var(--neutral-color-nc90);
+    text-align: right;
+    flex: 1;
+    margin-left: 16px;
+}
+
+/* 可点击项 */
+.info-item.clickable {
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.info-item.clickable:hover {
+    background-color: var(--neutral-color-nc10);
+}
+
+.info-item.clickable:active {
+    background-color: var(--neutral-color-nc20);
+}
+
+/* 链接样式的值 */
+.link-value {
+    color: var(--primary-color-red60);
+    font-weight: 500;
+}
+
+/* 箭头图标 */
+.arrow-icon {
+    width: 16px;
+    height: 16px;
+    opacity: 0.6;
+}
+
+/* 底部按钮区域 */
+.bottom-actions {
+    background: white;
+    border-top: 1px solid var(--neutral-color-nc20);
+    padding: 16px 20px;
+}
+
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* 自定义按钮样式已移除，使用组件库样式 */
+
+/* 文本按钮 */
+.btn-text-only {
+    background: none;
+    border: none;
+    color: var(--neutral-color-nc60);
+    font-size: 16px;
+    padding: 12px;
+    cursor: pointer;
+    text-align: center;
+    transition: color 0.2s;
+}
+
+.btn-text-only:hover {
+    color: var(--neutral-color-nc80);
+}
+
+.btn-text-only:active {
+    color: var(--neutral-color-nc90);
+}
+
+/* 账户号码样式 */
+.info-value:has-text("****") {
+    font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
+    letter-spacing: 0.5px;
+}
+
+/* 响应式调整 */
+@media (max-width: 375px) {
+    .amount-value {
+        font-size: 28px;
+    }
+    
+    .info-item {
+        padding: 14px 16px;
+    }
+    
+    .highlight-section {
+        padding: 20px 16px;
+    }
+    
+    .bottom-actions {
+        padding: 14px 16px;
+    }
+}
+
+/* 滚动条样式 */
+.scrollable-main-content::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+
+/* 加载动画（如果需要） */
+.loading {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+/* 错误状态 */
+.error-state {
+    color: var(--primary-color-red60);
+}
+
+/* 成功状态 */
+.success-state {
+    color: #4CAF50;
+}

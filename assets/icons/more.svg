@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>编组 2</title>
+    <g id="控件" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Nav/RightSide/white/More" transform="translate(-6, -10)">
+            <g id="编组-2" transform="translate(6, 10)">
+                <rect id="矩形" x="0" y="0" width="24" height="24"></rect>
+                <path d="M12,14 C13.1045695,14 14,13.1045695 14,12 C14,10.8954305 13.1045695,10 12,10 C10.8954305,10 10,10.8954305 10,12 C10,13.1045695 10.8954305,14 12,14 Z M20,14 C21.1045695,14 22,13.1045695 22,12 C22,10.8954305 21.1045695,10 20,10 C18.8954305,10 18,10.8954305 18,12 C18,13.1045695 18.8954305,14 20,14 Z M4,14 C5.1045695,14 6,13.1045695 6,12 C6,10.8954305 5.1045695,10 4,10 C2.8954305,10 2,10.8954305 2,12 C2,13.1045695 2.8954305,14 4,14 Z" id="more" fill="#656565"></path>
+            </g>
+        </g>
+    </g>
+</svg>

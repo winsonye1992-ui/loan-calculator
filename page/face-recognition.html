@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人脸识别 - 东莞银行直销银行</title>
+    <link rel="stylesheet" href="../src/styles/base/variables.css">
+    <link rel="stylesheet" href="../src/styles/base/section.css">
+    <link rel="stylesheet" href="../src/styles/base/element.css">
+    <link rel="stylesheet" href="../src/styles/base/iphone-preview.css">
+    <link rel="stylesheet" href="../src/styles/components/bar/status-bar.css">
+    <link rel="stylesheet" href="../src/styles/components/bar/phone-speaker.css">
+    <link rel="stylesheet" href="../src/styles/components/bar/nav-bar.css">
+    <link rel="stylesheet" href="../css/face-recognition.css">
+</head>
+<body>
+    <div class="iphone-container">
+        <div class="iphone-notch"></div>
+        <div class="iphone-screen">
+            <div class="content-area">
+                
+                <!-- 状态栏 -->
+                <section class="statusbar-wrapper">
+                    <div class="statusbar">
+                        <div class="statusbar-time">9:41</div>
+                        <div class="statusbar-icons">
+                            <img src="../src/assets/images/signal.png" alt="信号" class="statusbar-signal">
+                            <img src="../src/assets/images/WiFi.png" alt="WiFi" class="statusbar-wifi">
+                            <img src="../src/assets/images/battery.png" alt="电池" class="statusbar-battery">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 导航栏 -->
+                <section class="pad-vertical-0">
+                    <div class="nav-bar nav-bar-white">
+                        <div class="nav-left" onclick="window.location.href='application-info.html'">
+                            <img src="../src/assets/icons/arrow-left.svg" alt="返回" class="nav-icon">
+                        </div>
+                        <div class="nav-title">人脸识别</div>
+                        <div class="nav-right">
+                            <img src="../assets/icons/more.svg" alt="更多" class="nav-icon">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 主要内容区域 -->
+                <div class="main-content">
+                    
+                    <!-- 标题和说明 -->
+                    <div class="header-section">
+                        <h2 class="main-title">为确保您的账户与资金安全</h2>
+                        <p class="description">本次交易需要人脸识别验证您的身份信息，请确保为本人操作</p>
+                    </div>
+
+                    <!-- 人脸识别区域 -->
+                    <div class="face-recognition-area">
+                        <div class="face-circle" id="face-circle">
+                            <div class="face-outline">
+                                <!-- 人脸轮廓SVG -->
+                                <svg class="face-icon" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <!-- 头部轮廓 -->
+                                    <path d="M100 30 C130 30, 150 50, 150 80 L150 120 C150 160, 130 180, 100 180 C70 180, 50 160, 50 120 L50 80 C50 50, 70 30, 100 30 Z" 
+                                          stroke="#D4AF37" stroke-width="2" fill="none"/>
+                                    <!-- 左耳 -->
+                                    <path d="M50 90 C40 90, 35 95, 35 105 C35 115, 40 120, 50 120" 
+                                          stroke="#D4AF37" stroke-width="2" fill="none"/>
+                                    <!-- 右耳 -->
+                                    <path d="M150 90 C160 90, 165 95, 165 105 C165 115, 160 120, 150 120" 
+                                          stroke="#D4AF37" stroke-width="2" fill="none"/>
+                                    <!-- 脖子 -->
+                                    <path d="M85 180 L85 200 M115 180 L115 200" 
+                                          stroke="#D4AF37" stroke-width="2"/>
+                                </svg>
+                            </div>
+                        </div>
+                        
+                        <!-- 状态提示 -->
+                        <div class="status-message" id="status-message">
+                            <div class="status-text">请点击开始人脸识别</div>
+                        </div>
+                    </div>
+
+                    <!-- 操作提示 -->
+                    <div class="tips-section">
+                        <div class="tip-item">
+                            <div class="tip-icon">
+                                <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <!-- 禁止遮挡光线图标 -->
+                                    <circle cx="30" cy="30" r="25" stroke="#D4AF37" stroke-width="2" fill="none"/>
+                                    <path d="M20 20 L40 40 M40 20 L20 40" stroke="#D4AF37" stroke-width="2"/>
+                                    <circle cx="30" cy="30" r="8" stroke="#D4AF37" stroke-width="1.5" fill="none"/>
+                                </svg>
+                            </div>
+                            <span class="tip-text">请勿遮挡光</span>
+                        </div>
+                        
+                        <div class="tip-item">
+                            <div class="tip-icon">
+                                <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <!-- 不能低头仰头图标 -->
+                                    <circle cx="30" cy="30" r="25" stroke="#D4AF37" stroke-width="2" fill="none"/>
+                                    <path d="M20 20 L40 40 M40 20 L20 40" stroke="#D4AF37" stroke-width="2"/>
+                                    <path d="M25 25 C25 25, 30 20, 35 25 M25 35 C25 35, 30 40, 35 35" 
+                                          stroke="#D4AF37" stroke-width="1.5" fill="none"/>
+                                </svg>
+                            </div>
+                            <span class="tip-text">不能低头仰头</span>
+                        </div>
+                        
+                        <div class="tip-item">
+                            <div class="tip-icon">
+                                <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <!-- 眼镜不能反光图标 -->
+                                    <circle cx="30" cy="30" r="25" stroke="#D4AF37" stroke-width="2" fill="none"/>
+                                    <path d="M20 20 L40 40 M40 20 L20 40" stroke="#D4AF37" stroke-width="2"/>
+                                    <!-- 眼镜框 -->
+                                    <circle cx="25" cy="30" r="6" stroke="#D4AF37" stroke-width="1.5" fill="none"/>
+                                    <circle cx="35" cy="30" r="6" stroke="#D4AF37" stroke-width="1.5" fill="none"/>
+                                    <path d="M31 30 L29 30" stroke="#D4AF37" stroke-width="1.5"/>
+                                </svg>
+                            </div>
+                            <span class="tip-text">眼镜不能反光</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- 底部操作区域 -->
+                <div class="bottom-action-area">
+                    <div class="agreement-checkbox">
+                        <label class="checkbox">
+                            <input type="checkbox" id="face-agree-checkbox">
+                            <span class="checkbox__text">同意东莞银行采集并使用人脸信息用于核实身份，查看 
+                                <a href="#" class="agreement-link">《人脸识别服务用户协议》</a>
+                            </span>
+                        </label>
+                    </div>
+                    
+                    <section class="section">
+                        <div class="btn-group">
+                            <button class="btn-large btn-primary btn-disabled" id="start-face-btn" disabled>
+                                <span class="btn-text">开始人脸识别</span>
+                            </button>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- 手机话筒 -->
+                <section class="phone-speaker-wrap">
+                    <div class="phone-speaker">
+                        <div class="speaker-bar"></div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/face-recognition.js"></script>
+</body>
+</html>

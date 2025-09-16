@@ -1,0 +1,265 @@
+/* 人脸识别页面样式 */
+
+/* 内容区域整体布局 */
+.content-area {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: #f8f9fa;
+}
+
+/* 主要内容区域 */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    justify-content: space-between;
+}
+
+/* 标题和说明区域 */
+.header-section {
+    text-align: center;
+    padding: 32px 0 40px 0;
+}
+
+.main-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--neutral-color-nc20);
+    margin: 0 0 16px 0;
+    line-height: 1.4;
+}
+
+.description {
+    font-size: 14px;
+    color: var(--neutral-color-nc40);
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* 人脸识别区域 */
+.face-recognition-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 20px 0;
+}
+
+.face-circle {
+    width: 200px;
+    height: 200px;
+    border: 3px solid #D4AF37;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(255, 255, 255, 0.8) 100%);
+    position: relative;
+}
+
+.face-outline {
+    width: 160px;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.face-icon {
+    width: 120px;
+    height: 120px;
+}
+
+/* 状态提示样式 */
+.status-message {
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 100%;
+}
+
+.status-text {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--neutral-color-nc30);
+    padding: 8px 16px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 识别中状态 */
+.face-circle.recognizing {
+    animation: pulse 1.5s ease-in-out infinite;
+    border-color: #1890FF;
+    background: linear-gradient(135deg, rgba(24, 144, 255, 0.1) 0%, rgba(255, 255, 255, 0.8) 100%);
+}
+
+.status-text.recognizing {
+    color: #1890FF;
+    background: rgba(24, 144, 255, 0.1);
+}
+
+/* 成功状态 */
+.face-circle.success {
+    border-color: #52C41A;
+    background: linear-gradient(135deg, rgba(82, 196, 26, 0.1) 0%, rgba(255, 255, 255, 0.8) 100%);
+    animation: successPulse 0.6s ease-out;
+}
+
+.status-text.success {
+    color: #52C41A;
+    background: rgba(82, 196, 26, 0.1);
+}
+
+/* 动画效果 */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 0.8;
+    }
+}
+
+@keyframes successPulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* 操作提示区域 */
+.tips-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 20px 20px 20px;
+    gap: 20px;
+}
+
+.tip-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+}
+
+.tip-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tip-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.tip-text {
+    font-size: 12px;
+    color: var(--neutral-color-nc40);
+    text-align: center;
+    line-height: 1.3;
+}
+
+/* 底部操作区域 */
+.bottom-action-area {
+    background-color: white;
+    border-top: 1px solid var(--neutral-color-nc30);
+}
+
+/* 协议勾选区域 */
+.agreement-checkbox {
+    padding: 16px;
+    background-color: #f8f9fa;
+}
+
+.checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.checkbox input[type="checkbox"] {
+    margin-top: 2px;
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+.checkbox__text {
+    font-size: 12px;
+    color: var(--neutral-color-nc40);
+    line-height: 1.5;
+}
+
+.agreement-link {
+    color: #1890FF;
+    text-decoration: none;
+}
+
+.agreement-link:hover {
+    text-decoration: underline;
+}
+
+
+
+/* 响应式调整 */
+@media (max-width: 375px) {
+    .main-content {
+        padding: 0 16px;
+    }
+    
+    .header-section {
+        padding: 24px 0 32px 0;
+    }
+    
+    .main-title {
+        font-size: 16px;
+    }
+    
+    .face-circle {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .face-outline {
+        width: 140px;
+        height: 140px;
+    }
+    
+    .face-icon {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .tips-section {
+        padding: 32px 16px 16px 16px;
+        gap: 16px;
+    }
+    
+    .tip-icon {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .agreement-checkbox {
+        padding: 14px 12px;
+    }
+}

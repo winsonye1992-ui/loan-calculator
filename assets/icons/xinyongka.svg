@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>信用卡@1x</title>
+    <g id="20230427" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="贷款中心-入口" transform="translate(-313, -302)">
+            <g id="金刚区" transform="translate(23, 302)">
+                <g id="信用卡" transform="translate(290, 0)">
+                    <rect id="矩形" x="0" y="0" width="30" height="30"></rect>
+                    <g id="专户理财" transform="translate(2, 5.5)">
+                        <line x1="4.45" y1="11.35" x2="9.65" y2="11.35" id="路径" stroke="#101010" stroke-width="2"></line>
+                        <path d="M25,0 C25.5522847,0 26,0.44771525 26,1 L26,9 L24,9 L24,2 L2,2 L2,19 L16,19 L16,21 L1,21 C0.44771525,21 0,20.5522847 0,20 L0,1 C0,0.44771525 0.44771525,1.11022302e-16 1,0 L25,0 Z" id="形状结合" fill="#101010"></path>
+                        <g id="编组" transform="translate(17.4329, 11.0115)" fill="#FF413B" fill-rule="nonzero">
+                            <polygon id="路径" points="3.30858627 4.92816377 5.05858627 6.70281166 6.80858627 4.92816377 5.05858627 3.20281166"></polygon>
+                            <path d="M5,2 C6.63636364,2 8,3.36363636 8,5 C8,6.63636364 6.63636364,8 5,8 C3.36363636,8 2,6.63636364 2,5 C2,3.36363636 3.36363636,2 5,2 M5,0 C2.21698113,0 0,2.21698113 0,5 C0,7.78301887 2.21698113,10 5,10 C7.78301887,10 10,7.78301887 10,5 C10,2.21698113 7.78301887,0 5,0 L5,0 Z" id="形状"></path>
+                        </g>
+                        <line x1="1" y1="6" x2="24.5" y2="6" id="路径" stroke="#101010" stroke-width="2"></line>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

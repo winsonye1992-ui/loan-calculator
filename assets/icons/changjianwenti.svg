@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>常见问题@1x</title>
+    <g id="20230427" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="贷款中心-入口" transform="translate(-129, -1557)">
+            <g id="编组-8" transform="translate(15, 1432)">
+                <g id="常用功能" transform="translate(13.5, 55)">
+                    <g id="常见问题" transform="translate(100.5, 70)">
+                        <rect id="矩形" x="0" y="0" width="30" height="30"></rect>
+                        <g id="编组" transform="translate(3, 3)">
+                            <path d="M12,24 C15.31368,24 18.31368,22.65684 20.48526,20.48526 C22.65684,18.31368 24,15.31368 24,12 C24,8.68632 22.65684,5.68632 20.48526,3.514716 C18.31368,1.343148 15.31368,0 12,0 C8.68632,0 5.68632,1.343148 3.514716,3.514716 C1.343148,5.68632 0,8.68632 0,12 C0,15.31368 1.343148,18.31368 3.514716,20.48526 C5.68632,22.65684 8.68632,24 12,24 Z" id="路径" stroke="#333333" stroke-width="2" stroke-linejoin="round"></path>
+                            <path d="M12,14.77488 L12,12.37488 C13.98822,12.37488 15.6,10.7631 15.6,8.77488 C15.6,6.78666 13.98822,5.17488 12,5.17488 C10.01178,5.17488 8.4,6.78666 8.4,8.77488" id="路径" stroke="#EF3434" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M12,20.17488 C12.82842,20.17488 13.5,19.5033 13.5,18.67488 C13.5,17.84646 12.82842,17.17488 12,17.17488 C11.17158,17.17488 10.5,17.84646 10.5,18.67488 C10.5,19.5033 11.17158,20.17488 12,20.17488 Z" id="路径" fill="#EF3434"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,360 @@
+/* 还款记录页样式 */
+
+/* 可滚动内容区域 */
+.scrollable-main-content {
+    height: calc(812px - 44px - 44px - 30px + 40px); /* iPhone总高度减去状态栏、导航栏、手机话筒，增加40px */
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: #F8F9FA;
+}
+
+/* 时间筛选区域 */
+.filter-section {
+    background: white;
+    padding: 16px 0;
+    margin-bottom: 0;
+    border-bottom: 1px solid var(--neutral-color-nc20);
+}
+
+/* 时间选项卡 */
+.time-tabs {
+    display: flex;
+    padding: 0 20px;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.time-tab {
+    flex: 1;
+    height: 32px;
+    border: 1px solid #E53E3E;
+    background: white;
+    color: #E53E3E;
+    font-size: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    border-radius: 4px;
+}
+
+.time-tab.active {
+    background: #E53E3E;
+    color: white;
+    border-color: #E53E3E;
+}
+
+.time-tab:hover:not(.active) {
+    background: rgba(239, 68, 68, 0.05);
+}
+
+/* 日期选择器区域 */
+.date-picker-section {
+    padding: 0 20px;
+}
+
+.date-inputs {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.date-input-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+    max-width: calc(100% - 80px);
+}
+
+.date-input {
+    flex: 1;
+    height: 32px;
+    padding: 0 12px;
+    border: 1px solid var(--neutral-color-nc30);
+    border-radius: 4px;
+    font-size: 14px;
+    color: var(--neutral-color-nc70);
+    background: white;
+    position: relative;
+    min-width: 0;
+    max-width: 120px;
+}
+
+.date-input:focus {
+    outline: none;
+    border-color: var(--primary-color-red60);
+}
+
+.date-arrow {
+    color: var(--neutral-color-nc50);
+    font-size: 14px;
+    margin: 0 4px;
+}
+
+.query-btn {
+    height: 32px;
+    padding: 0 16px;
+    background: #E53E3E;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s;
+    white-space: nowrap;
+    flex-shrink: 0;
+    min-width: 60px;
+}
+
+.query-btn:hover {
+    background: #C53030;
+}
+
+.query-btn:active {
+    background: #9C2626;
+}
+
+/* 记录统计 */
+.stats-section {
+    background: #F8F9FA;
+    padding: 12px 20px;
+    margin-bottom: 0;
+}
+
+.stats-text {
+    font-size: 14px;
+    color: var(--neutral-color-nc60);
+    text-align: left;
+}
+
+/* 还款记录列表 */
+.history-list-section {
+    background: white;
+    padding: 0;
+}
+
+/* 还款记录项 */
+.history-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 20px;
+    border-bottom: 1px solid var(--neutral-color-nc20);
+    position: relative;
+}
+
+.history-item:last-child {
+    border-bottom: none;
+}
+
+/* 时间轴点 */
+.history-item::before {
+    content: '';
+    position: absolute;
+    left: 71px;
+    top: 21px;
+    width: 8px;
+    height: 8px;
+    background: white;
+    border: 1px solid var(--neutral-color-nc30);
+    border-radius: 50%;
+    z-index: 2;
+}
+
+/* 时间轴线 */
+.history-item::after {
+    content: '';
+    position: absolute;
+    left: 75px;
+    top: 29px;
+    bottom: -1px;
+    width: 1px;
+    background: var(--neutral-color-nc30);
+    z-index: 1;
+}
+
+.history-item:last-child::after {
+    display: none;
+}
+
+/* 日期区域 */
+.history-date {
+    width: 60px;
+    text-align: center;
+    margin-right: 32px;
+    flex-shrink: 0;
+}
+
+.date-year {
+    font-size: 12px;
+    color: var(--neutral-color-nc50);
+    margin-bottom: 2px;
+}
+
+.date-month-day {
+    font-size: 14px;
+    color: var(--neutral-color-nc70);
+    font-weight: 500;
+}
+
+/* 还款详情区域 */
+.history-details {
+    flex: 1;
+    min-width: 0;
+}
+
+/* 还款金额 */
+.history-amount {
+    font-size: 20px;
+    font-weight: 600;
+    color: #E53E3E;
+    line-height: 1.2;
+    margin-bottom: 4px;
+}
+
+/* 状态文字 */
+.history-status {
+    font-size: 12px;
+    color: var(--neutral-color-nc50);
+    margin-bottom: 8px;
+}
+
+/* 本金利息分解 */
+.history-breakdown {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.breakdown-item {
+    font-size: 12px;
+    color: var(--neutral-color-nc60);
+    white-space: nowrap;
+}
+
+/* 空状态 */
+.empty-section {
+    background: white;
+    padding: 60px 20px;
+}
+
+.empty-state {
+    text-align: center;
+}
+
+.empty-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 16px;
+    opacity: 0.3;
+}
+
+.empty-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.empty-text {
+    font-size: 16px;
+    color: var(--neutral-color-nc60);
+    margin-bottom: 8px;
+}
+
+.empty-hint {
+    font-size: 14px;
+    color: var(--neutral-color-nc40);
+}
+
+/* 滚动条样式 */
+.scrollable-main-content::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+
+/* 响应式调整 */
+@media (max-width: 375px) {
+    .history-item {
+        padding: 16px;
+    }
+    
+    .history-date {
+        width: 50px;
+        margin-right: 24px;
+    }
+    
+    .history-item::before {
+        left: 62px;
+    }
+    
+    .history-item::after {
+        left: 65px;
+    }
+    
+    .history-amount {
+        font-size: 16px;
+    }
+    
+    .history-breakdown {
+        gap: 12px;
+    }
+    
+    .filter-section {
+        padding: 14px 0;
+    }
+    
+    .time-tabs {
+        padding: 0 16px;
+    }
+    
+    .date-picker-section {
+        padding: 0 16px;
+    }
+    
+    .stats-section {
+        padding: 10px 16px;
+    }
+    
+    .time-tab {
+        font-size: 11px;
+        height: 30px;
+    }
+}
+
+/* 加载状态 */
+.loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.loading .history-item {
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* 动画效果 */
+.fade-in {
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

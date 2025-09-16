@@ -1,0 +1,142 @@
+/* 借款记录页面样式 */
+
+/* 可滚动内容容器样式 */
+.scrollable-main-content {
+    height: calc(812px - 44px - 44px - 30px); /* iPhone总高度减去状态栏、导航栏、手机话筒 */
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: #f5f5f5;
+    padding: 16px;
+}
+
+/* 统计信息 */
+.summary-info {
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.summary-text {
+    font-size: 14px;
+    color: var(--neutral-color-nc40);
+}
+
+.show-all-btn {
+    background: transparent;
+    border: none;
+    color: #1890FF;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 0;
+    text-decoration: underline;
+}
+
+.show-all-btn:hover {
+    color: #40A9FF;
+}
+
+/* 借款记录列表 */
+.loan-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* 借款记录项 */
+.loan-item {
+    background: white;
+    border-radius: 4px;
+    padding: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* 借款头部信息 */
+.loan-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.loan-date {
+    font-size: 14px;
+    color: var(--neutral-color-nc40);
+}
+
+.loan-status {
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.loan-status.normal {
+    color: #52C41A;
+}
+
+.loan-status.settled {
+    color: var(--neutral-color-nc50);
+}
+
+.loan-status.overdue {
+    color: #FF4D4F;
+}
+
+.loan-status.terminated {
+    color: #FF4D4F;
+}
+
+/* 借款金额信息 */
+.loan-amounts {
+    display: flex;
+    justify-content: space-between;
+}
+
+.loan-amount-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.loan-amount-item:last-child {
+    align-items: flex-end;
+    text-align: right;
+}
+
+.amount-value {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--neutral-color-nc20);
+    margin-bottom: 4px;
+    line-height: 1.2;
+}
+
+.amount-value.red {
+    color: #FF4D4F;
+}
+
+.amount-label {
+    font-size: 12px;
+    color: var(--neutral-color-nc50);
+}
+
+/* 响应式调整 */
+@media (max-width: 375px) {
+    .scrollable-main-content {
+        padding: 12px;
+    }
+    
+    .loan-item {
+        padding: 14px;
+    }
+    
+    .amount-value {
+        font-size: 18px;
+    }
+    
+    .summary-info {
+        padding: 14px;
+    }
+}

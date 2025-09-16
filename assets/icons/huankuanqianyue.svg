@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>代还款签约@1x</title>
+    <g id="20230427" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="贷款中心-入口" transform="translate(-291, -1557)">
+            <g id="编组-8" transform="translate(15, 1432)">
+                <g id="常用功能" transform="translate(13.5, 55)">
+                    <g id="代还款签约" transform="translate(262.5, 70)">
+                        <rect id="矩形" x="0" y="0" width="30" height="30"></rect>
+                        <g id="编组" transform="translate(4, 2)">
+                            <rect id="矩形" stroke="#333333" stroke-width="2" x="1" y="1" width="20" height="24" rx="1"></rect>
+                            <rect id="矩形" fill="#333333" x="5" y="5" width="12" height="2"></rect>
+                            <rect id="矩形备份-13" fill="#333333" x="5" y="9.5" width="7" height="2"></rect>
+                            <polygon id="路径" fill="#EF3434" points="9 20.0189329 14.7684738 14.2222222 16.7608696 16.2048499 10.9916021 22 9 22"></polygon>
+                            <path d="M18.80659,14.2551736 L17.835932,15.3333333 L15.6521739,13.1863536 L16.6875425,12.1676207 L16.6875425,12.1676206 C16.9036676,11.9486627 17.2592722,11.9435531 17.4818036,12.1562065 C17.4857267,12.1599555 17.489594,12.1637606 17.4934042,12.1676207 L18.8074588,13.4614116 L18.8074587,13.4614115 C19.0302288,13.6738233 19.0358162,14.0237064 18.8199354,14.2428991 C18.8158421,14.2470552 18.8116827,14.2511478 18.8074588,14.2551753 L18.80659,14.2551736 Z" id="路径" fill="#EF3434"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

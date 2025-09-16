@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>还款记录 - 东莞银行直销银行</title>
+    <link rel="stylesheet" href="../src/styles/base/variables.css">
+    <link rel="stylesheet" href="../src/styles/base/section.css">
+    <link rel="stylesheet" href="../src/styles/base/element.css">
+    <link rel="stylesheet" href="../src/styles/base/iphone-preview.css">
+    <link rel="stylesheet" href="../src/styles/components/bar/status-bar.css">
+    <link rel="stylesheet" href="../src/styles/components/bar/phone-speaker.css">
+    <link rel="stylesheet" href="../src/styles/components/bar/nav-bar.css">
+    <link rel="stylesheet" href="../css/repayment-history.css">
+</head>
+<body>
+    <div class="iphone-container">
+        <div class="iphone-notch"></div>
+        <div class="iphone-screen">
+            <div class="content-area">
+                
+                <!-- 状态栏 -->
+                <section class="statusbar-wrapper">
+                    <div class="statusbar">
+                        <div class="statusbar-time">9:41</div>
+                        <div class="statusbar-icons">
+                            <img src="../src/assets/images/signal.png" alt="信号" class="statusbar-signal">
+                            <img src="../src/assets/images/WiFi.png" alt="WiFi" class="statusbar-wifi">
+                            <img src="../src/assets/images/battery.png" alt="电池" class="statusbar-battery">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 导航栏 -->
+                <section class="pad-vertical-0">
+                    <div class="nav-bar nav-bar-white">
+                        <div class="nav-left" onclick="history.back()">
+                            <img src="../src/assets/icons/arrow-left.svg" alt="返回" class="nav-icon">
+                        </div>
+                        <div class="nav-title">还款记录</div>
+                        <div class="nav-right">
+                            <img src="../assets/icons/more.svg" alt="更多" class="nav-icon">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 可滚动内容容器 -->
+                <div class="scrollable-main-content">
+                    
+                    <!-- 时间筛选区域 -->
+                    <section class="filter-section">
+                        <!-- 快捷时间选择 -->
+                        <div class="time-tabs">
+                            <button class="time-tab active" data-period="3months">近3个月</button>
+                            <button class="time-tab" data-period="6months">近6个月</button>
+                            <button class="time-tab" data-period="1year">近1年</button>
+                            <button class="time-tab" data-period="custom">指定日期</button>
+                        </div>
+                        
+                        <!-- 自定义日期选择 -->
+                        <div class="date-picker-section" id="date-picker">
+                            <div class="date-inputs">
+                                <div class="date-input-group">
+                                    <input type="date" id="start-date" value="2019-09-19" class="date-input">
+                                    <span class="date-arrow">-</span>
+                                    <input type="date" id="end-date" value="2019-12-18" class="date-input">
+                                </div>
+                                <button class="query-btn" id="query-btn">查询</button>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- 记录统计 -->
+                    <section class="stats-section">
+                        <div class="stats-text">共 3 条记录</div>
+                    </section>
+
+                    <!-- 还款记录列表 -->
+                    <section class="history-list-section">
+                        <!-- 还款记录项 1 -->
+                        <div class="history-item">
+                            <div class="history-date">
+                                <div class="date-year">2020</div>
+                                <div class="date-month-day">03-25</div>
+                            </div>
+                            <div class="history-details">
+                                <div class="history-amount">￥ 2,034.32</div>
+                                <div class="history-status">已还金额(元)</div>
+                                <div class="history-breakdown">
+                                    <span class="breakdown-item">本金：2,000.00</span>
+                                    <span class="breakdown-item">利息：34.32</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 还款记录项 2 -->
+                        <div class="history-item">
+                            <div class="history-date">
+                                <div class="date-year">2020</div>
+                                <div class="date-month-day">03-25</div>
+                            </div>
+                            <div class="history-details">
+                                <div class="history-amount">￥ 2,034.32</div>
+                                <div class="history-status">已还金额(元)</div>
+                                <div class="history-breakdown">
+                                    <span class="breakdown-item">本金：2,000.00</span>
+                                    <span class="breakdown-item">利息：34.32</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </section>
+
+                    <!-- 空状态（当没有记录时显示） -->
+                    <section class="empty-section" id="empty-section" style="display: none;">
+                        <div class="empty-state">
+                            <div class="empty-icon">
+                                <svg viewBox="0 0 64 64" fill="none">
+                                    <circle cx="32" cy="32" r="28" stroke="#E0E0E0" stroke-width="2"/>
+                                    <path d="M20 32h24M32 20v24" stroke="#E0E0E0" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <div class="empty-text">暂无还款记录</div>
+                            <div class="empty-hint">选择其他时间范围查看记录</div>
+                        </div>
+                    </section>
+
+                </div>
+
+                <!-- 手机话筒 -->
+                <section class="phone-speaker-wrap">
+                    <div class="phone-speaker">
+                        <div class="speaker-bar"></div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/repayment-history.js"></script>
+</body>
+</html>
