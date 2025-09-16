@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="768px" height="896px" viewBox="0 0 768 896" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>security</title>
-    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="security" fill="#000000" fill-rule="nonzero">
-            <path d="M386.656,0 C487.568,96.816 620.48,160.432 768,173.392 L752,544 C752,624 672,720 624,768 C576,816 464,896 384,896 C315.232,896 192,816 144,768 C96,720 16,624 16,544 L0,173.392 C147.52,160.432 280.416,96.816 381.328,0 Z M578.312,308.864 L369.44,545.568 L242.088,394.4 L188.024,426.848 L369.088,650.304 L624.648,345.984 L578.312,308.864 Z" id="形状结合"></path>
-        </g>
-    </g>
-</svg>
